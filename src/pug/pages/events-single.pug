@@ -1,0 +1,223 @@
+extends ../layouts/default
+
+block vars
+	-
+		const page = {
+			title: 'Event | Korustec'
+		};
+
+block main
+	.events-single
+		.container
+			h1.h2 5th Korea-Russia Science Day
+			.events-single__captions
+				+caption('Date:', '', '20/09/2022', 'events-single__caption')
+				+caption('Time:', '', '13:00 - 16:00', 'events-single__caption')
+				+caption('Venue:', '', 'Main Building of Russian Academy of Sciences / Seoul Myeongdong ibis Ambassador Hotel', 'events-single__caption')
+				+caption('Organizers:', '', 'KORSUTEC,  Russian Academy of Sciences, Russian Foundation for Basic Research', 'events-single__caption')
+				+caption('Attendance:', '', '10 astronomical and space speakers  (5 from South  Korea, 5 from Russia), 10 vaccine speakers (6 from South Korea, 4  from Russia)', 'events-single__caption')
+				+caption('Main Areas:', '', 'Astronomy and Space (Wednesday, December 22), 2)Vaccine(Thursday, December 23rd))', 'events-single__caption')
+			.events-single__note ! We conduct the event offline in Moscow, and in Korea, we participate online and broadcast it
+					|  through the website in the form of an online dual live broadcast.
+			.events-single__filter-tags.filter-tags.filter-tags--outline
+				.filter-tags__row
+					a.filter-tags__item(href='#', target='_blank') #NEW MATERIAL
+					a.filter-tags__item(href='#', target='_blank') #COSMOS
+					a.filter-tags__item(href='#', target='_blank') #ANOTHER TAG
+					.events-single__views.views.d-none-flex-mobile
+						.views__icon
+							+icon('views')(width='30', height='30')
+						.views__digit 122
+				.events-single__views.views.d-none-flex-desktop
+					.views__icon
+						+icon('views')(width='30', height='30')
+					.views__digit 122
+			.events-single__table.events-single__table--small.table
+				h3 Program
+				table
+					tr
+						th Date
+						th Time
+						th Content
+					tr
+						td(rowspan='2') 01.01.2023
+						td 10:00–10:30
+						td Opening ceremony
+					tr
+						td 10:30–11:30
+						td Session 1 (Discipline: Astronomy and Space) - Coffee break <br class="d-none-mobile"> included
+			.events-single__table.table
+				h3 Detailed Program
+				table
+					tr
+						th(rowspan='2') Category
+						th(rowspan='2') Time
+						th(colspan='2') Speakers
+						th(rowspan='2') ETC
+					tr
+						th Opening
+						th Affiliation
+					tr
+						td(rowspan='2') Opening
+						td 10:00~10:05
+						td Director of the Seo Gil-won
+						td KORUSTEC
+						td Opening
+					tr
+						td 10:00~10:05
+						td Director of the Seo Gil-won
+						td Russian Academy of Sciences
+						td(rowspan='2') congratulatory address <br> congratulatory address
+					tr
+						td(rowspan='4') Part section <br> (Astronomical <br> Universe)
+						td 10:00~10:05
+						td Director of the Seo Gil-won
+						td KORUSTEC
+					tr
+						td 10:00~10:05
+						td Director of the Seo Gil-won
+						td Russian Academy of Sciences
+						td(rowspan='2') congratulatory address <br> congratulatory address
+					tr
+						td 10:00~10:05
+						td Director of the Seo Gil-won
+						td KORUSTEC
+					tr
+						td 10:00~10:05
+						td(colspan='2') Coffee Break
+						td(rowspan='5') congratulatory address <br> 5 people on the <br> Korean side, <br> 5 people on <br> the Russian side
+					tr
+						td(rowspan='4') Part section <br> (Astronomical <br> Universe)
+						td 10:00~10:05
+						td Director of the Seo Gil-won
+						td Director of the Seo Gil-won
+					tr
+						td 10:00~10:05
+						td Director of the Seo Gil-won
+						td Russian Academy of Sciences
+					tr
+						td 10:00~10:05
+						td Director of the Seo Gil-won
+						td KORUSTEC
+					tr
+						td 10:00~10:05
+						td Director of the Seo Gil-won
+						td KORUSTEC
+			.events-single__table.events-single__table--small.table
+				h3 Key Announcements
+				table
+					tr
+						th Category
+						th Contents
+					tr
+						td Korean side
+						td
+							ul.list
+								li Lunar Vehicle Radiation Dosimeter (LVRAD)
+								li Korea's Infrared Space Telescope Mission and Millimitron's Future Prospects
+								li Synergy between the VLBI (VLBI) Network and the Millimitron Space Telescope
+								li Quasi-optical circuit design for millimeter-wave multi-frequency band receiving systems
+								li The resources and importance of the moon generated from the solar wind
+					tr
+						td Russian side
+						td
+							ul.list
+								li Lunar Vehicle Radiation Dosimeter (LVRAD)
+								li Korea's Infrared Space Telescope Mission and Millimitron's Future Prospects
+								li Synergy between the VLBI (VLBI) Network and the Millimitron Space Telescope
+								li Quasi-optical circuit design for millimeter-wave multi-frequency band receiving systems
+								li The resources and importance of the moon generated from the solar wind
+			.events-single__block
+				h3.events-single__subtitle Header h3
+				.events-single__text
+					p Russian <b>specialists</b> were the first in the world to learn how to control
+						|  the mechanical properties of high-strength steel products printed on a 3D printer, according to the official
+						|  website of the Ministry of Education and Science of the Russian
+						|  Federation <a href="https://www.metalinfo.ru/ru/news/139778" target="_blank">https://www.metalinfo.ru/ru/news/139778</a>
+					p Russian specialists were the first in the world to learn how to control the mechanical properties of high-strength
+						|  steel products printed on a 3D printer, according to the official website of the Ministry of Education and
+						|  Science of the Russian Federation.
+					p Russian scientists have developed a new highly efficient catalyst for the industrial processing of carbon
+						|  dioxide, one of the culprits of global warming. Its key characteristics are a simple method of obtaining
+						|  and low cost. Russian scientists have developed a new highly efficient catalyst for the industrial
+						|  processing of carbon dioxide, one of the culprits of global warming. Its key characteristics are a simple
+						|  method of obtaining and low cost. Russian scientists have developed a new highly efficient
+						|  catalyst for the industrial processing of carbon dioxide, one of the culprits of global warming.
+						|  Its key characteristics are a simple method of obtaining and low cost.
+				ul.events-single__list
+					li Russian specialists were the first in the world to learn how to control the mechanical
+						|  properties of high-strength steel products printed on a 3D printer, according to the official
+						|  website of the Ministry of Education and Science of the Russian
+						|  Federation <a href="https://www.metalinfo.ru/ru/news/139778" target="_blank">https://www.metalinfo.ru/ru/news/139778</a>
+					li Russian scientists have created an environmentally friendly and economical method for producing hydrogels
+						|  from waste paper. The development will allow agricultural enterprises to use water resources more rationally
+						|  and help in the disposal of paper waste.
+					li Russian scientists have developed a new highly efficient catalyst for the industrial processing of carbon dioxide
+			.events-single__block
+				h3.events-single__subtitle Header h3
+				.events-single__text
+					p Russian <b>specialists</b> were the first in the world to learn how to control
+						|  the mechanical properties of high-strength steel products printed on a 3D printer, according to the official
+						|  website of the Ministry of Education and Science of the Russian
+						|  Federation <a href="https://www.metalinfo.ru/ru/news/139778" target="_blank">https://www.metalinfo.ru/ru/news/139778</a>
+					p Russian specialists were the first in the world to learn how to control the mechanical properties of high-strength
+						|  steel products printed on a 3D printer, according to the official website of the Ministry of Education and
+						|  Science of the Russian Federation.
+					p Russian scientists have developed a new highly efficient catalyst for the industrial processing of carbon
+						|  dioxide, one of the culprits of global warming. Its key characteristics are a simple method of obtaining
+						|  and low cost. Russian scientists have developed a new highly efficient catalyst for the industrial
+						|  processing of carbon dioxide, one of the culprits of global warming. Its key characteristics are a simple
+						|  method of obtaining and low cost. Russian scientists have developed a new highly efficient
+						|  catalyst for the industrial processing of carbon dioxide, one of the culprits of global warming.
+						|  Its key characteristics are a simple method of obtaining and low cost.
+				ul.events-single__list
+					li Russian specialists were the first in the world to learn how to control the mechanical
+						|  properties of high-strength steel products printed on a 3D printer, according to the official
+						|  website of the Ministry of Education and Science of the Russian
+						|  Federation <a href="https://www.metalinfo.ru/ru/news/139778" target="_blank">https://www.metalinfo.ru/ru/news/139778</a>
+					li Russian scientists have created an environmentally friendly and economical method for producing hydrogels
+						|  from waste paper. The development will allow agricultural enterprises to use water resources more rationally
+						|  and help in the disposal of paper waste.
+					li Russian scientists have developed a new highly efficient catalyst for the industrial processing of carbon dioxide
+			.events-single__photo-slider.photo-slider
+				h3 Photo
+				.photo-slider__slider.js-slider-photo
+					.swiper-wrapper
+						.photo-slider__item.swiper-slide
+							a(href='images/publication.jpg', data-fancybox='gallery')
+								img(src='images/publication.jpg', srcset='images/publication@2x.jpg 2x', alt='')
+						.photo-slider__item.swiper-slide
+							a(href='images/publication.jpg', data-fancybox='gallery')
+								img(src='images/publication.jpg', srcset='images/publication@2x.jpg 2x', alt='')
+						.photo-slider__item.swiper-slide
+							a(href='images/publication.jpg', data-fancybox='gallery')
+								img(src='images/publication.jpg', srcset='images/publication@2x.jpg 2x', alt='')
+						.photo-slider__item.swiper-slide
+							a(href='images/publication.jpg', data-fancybox='gallery')
+								img(src='images/publication.jpg', srcset='images/publication@2x.jpg 2x', alt='')
+						.photo-slider__item.swiper-slide
+							a(href='images/publication.jpg', data-fancybox='gallery')
+								img(src='images/publication.jpg', srcset='images/publication@2x.jpg 2x', alt='')
+						.photo-slider__item.swiper-slide
+							a(href='images/publication.jpg', data-fancybox='gallery')
+								img(src='images/publication.jpg', srcset='images/publication@2x.jpg 2x', alt='')
+						.photo-slider__item.swiper-slide
+							a(href='images/publication.jpg', data-fancybox='gallery')
+								img(src='images/publication.jpg', srcset='images/publication@2x.jpg 2x', alt='')
+						.photo-slider__item.swiper-slide
+							a(href='images/publication.jpg', data-fancybox='gallery')
+								img(src='images/publication.jpg', srcset='images/publication@2x.jpg 2x', alt='')
+						.photo-slider__item.swiper-slide
+							a(href='images/publication.jpg', data-fancybox='gallery')
+								img(src='images/publication.jpg', srcset='images/publication@2x.jpg 2x', alt='')
+						.photo-slider__item.swiper-slide
+							a(href='images/publication.jpg', data-fancybox='gallery')
+								img(src='images/publication.jpg', srcset='images/publication@2x.jpg 2x', alt='')
+						.photo-slider__item.swiper-slide
+							a(href='images/publication.jpg', data-fancybox='gallery')
+								img(src='images/publication.jpg', srcset='images/publication@2x.jpg 2x', alt='')
+						.photo-slider__item.swiper-slide
+							a(href='images/publication.jpg', data-fancybox='gallery')
+								img(src='images/publication.jpg', srcset='images/publication@2x.jpg 2x', alt='')
+			.events-single__back
+				+button('BACK', 'button--black', '#')

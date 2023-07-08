@@ -1,0 +1,52 @@
+.heading {
+	$parent: &;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 40px;
+
+	&__all {
+		display: flex;
+		align-items: center;
+		gap: 8px;
+		font-size: 18px;
+		line-height: 21px;
+		font-weight: 700;
+
+		@include max(md) {
+			font-size: 14px;
+			line-height: 16px;
+			font-weight: 400;
+		}
+
+		span::after {
+			background-color: currentColor;
+		}
+
+		svg {
+			width: 14px;
+			height: 24px;
+			stroke: $textMainColor;
+
+			@include max(md) {
+				width: 10px;
+				height: 17px;
+			}
+		}
+	}
+
+	&--white {
+		color: $white;
+
+		#{$parent} {
+			&__all {
+				color: $white;
+
+				svg {
+					stroke: $white;
+				}
+			}
+		}
+	}
+}

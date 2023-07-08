@@ -1,0 +1,78 @@
+.filter-tags {
+	$parent: &;
+
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+
+	@include max(md) {
+		gap: 10px;
+	}
+
+	&__row {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 20px;
+
+		@include max(md) {
+			gap: 10px;
+		}
+
+		&--w50 {
+			#{$parent}__item {
+				@include max(md) {
+					width: calc(50% - 5px);
+				}
+			}
+		}
+	}
+
+	&__item {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		background-color: $blue-0a;
+		border: 1px solid $blue-0a;
+		font-size: 14px;
+		color: $grey-f5;
+		padding: 9px 55px;
+		height: 36px;
+		border-radius: 100px;
+		box-sizing: border-box;
+		transition: 0.3s ease;
+		cursor: pointer;
+
+		@include hover {
+			background-color: $blue-29;
+		}
+
+		@include max(md) {
+			width: 100%;
+		}
+	}
+
+	&__key-words {
+		display: flex;
+		flex-grow: 1;
+		justify-content: flex-end;
+
+		@include max(md) {
+			width: 100%;
+			justify-content: flex-start;
+		}
+	}
+
+	&--outline {
+		#{$parent}__item {
+			background-color: $white;
+			color: $black-23;
+			padding: 9px 37px;
+
+			@include hover {
+				background-color: $blue-29;
+				color: $grey-f5;
+			}
+		}
+	}
+}

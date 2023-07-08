@@ -1,0 +1,59 @@
+.pagination {
+	$parent: &;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	&__links {
+		display: flex;
+		align-items: center;
+	}
+
+	&__btn,
+	&__link {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 41px;
+		height: 41px;
+		border-radius: 50%;
+		border: 1px solid transparent;
+		box-sizing: border-box;
+		transition: 0.3s ease;
+	}
+
+	&__btn {
+		@include hover {
+			border-color: $blue-0a;
+		}
+
+		svg {
+			stroke: $textMainColor;
+		}
+
+		&--first svg {
+			transform: rotate(180deg);
+		}
+	}
+
+	span#{$parent}__link {
+		pointer-events: none;
+	}
+
+	&__link {
+		font-size: 16px;
+		letter-spacing: 0.01em;
+		color: $black-12;
+
+		&:not(.active) {
+			@include hover {
+				border-color: $blue-0a;
+			}
+		}
+
+		&.active {
+			border-color: $blue-0a;
+		}
+	}
+}

@@ -1,0 +1,177 @@
+.about-page {
+	padding: 107px 0 200px;
+
+	@include max(md) {
+		padding: 10px 0 70px;
+	}
+
+	&__map {
+		width: 100%;
+		height: 829px;
+		margin-top: 200px;
+		position: relative;
+
+		@include max(lg) {
+			height: auto;
+			margin-top: 100px;
+		}
+
+		@include max(md) {
+			margin-top: 50px;
+		}
+
+		#map {
+			width: 100%;
+			height: 100%;
+
+			@include max(lg) {
+				height: 700px;
+			}
+
+			@include max(md) {
+				height: 500px;
+			}
+		}
+	}
+
+	&__wrapper {
+		position: relative;
+	}
+
+	&__container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin-top: 67px;
+	}
+
+	&__overflow {
+		overflow: hidden;
+	}
+
+	&__content {
+		width: 51%;
+
+		@include max(lg) {
+			width: 100%;
+		}
+	}
+
+	&__mission {
+		width: 36.7vw;
+		height: 100%;
+		padding: 0;
+		position: absolute;
+		top: 8px;
+		right: 0;
+
+		@include max(lg) {
+			width: 100%;
+			height: auto;
+			padding: 0 15px;
+			position: relative;
+			top: 0;
+			right: unset;
+			left: 0;
+		}
+
+		ul {
+			max-width: 675px;
+			margin-top: 33px;
+
+			@include max(lg) {
+				max-width: 100%;
+			}
+		}
+
+		.mission__outer {
+			position: sticky;
+			top: 100px;
+			border-radius: 20px 0 0 20px;
+			padding: 77px 50px 73px 103px;
+			margin-top: 0;
+
+			@include max(lg) {
+				padding: 50px 30px;
+				border-radius: 20px;
+				margin-top: 50px;
+				position: relative;
+				top: 0;
+			}
+
+			&::before {
+				display: none;
+			}
+		}
+
+		.mission__top h3 {
+			color: $grey-f5;
+		}
+	}
+
+	&__list-block {
+		margin-top: 29px;
+
+		& > p {
+			font-size: 16px;
+			color: $black-23;
+			margin-bottom: 16px;
+		}
+	}
+
+	&__map-caption {
+		position: absolute;
+		top: 73px;
+		left: 44px;
+		z-index: 2;
+
+		@include max(lg) {
+			position: relative;
+			top: 0;
+			left: 0;
+		}
+	}
+}
+
+.map-caption {
+	max-width: 579px;
+	width: 100%;
+	padding: 37px 45px 65px;
+	background-color: $white;
+	box-shadow: 0 5px 10px 3px rgba(0, 0, 0, 0.05);
+	border-radius: 8px;
+	font-size: 16px;
+	line-height: 21px;
+	letter-spacing: 0.01em;
+	color: $black-23;
+	font-style: normal;
+
+	@include max(lg) {
+		max-width: 100%;
+		box-shadow: none;
+		background-color: transparent;
+		padding: 40px 0;
+	}
+
+	&__content {
+		max-width: 285px;
+
+		@include max(lg) {
+			max-width: 100%;
+		}
+	}
+
+	address {
+		margin-top: 29px;
+		font-style: normal;
+	}
+
+	&__phone,
+	&__email {
+		margin-top: 29px;
+	}
+
+	&__lang {
+		margin-top: 5px;
+	}
+}

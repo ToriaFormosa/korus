@@ -1,0 +1,155 @@
+extends ../layouts/default
+
+block vars
+	-
+		const page = {
+			title: 'Search | Korustec'
+		};
+
+block main
+	.search-page
+		.container
+			h1 Search
+			.search-page__top
+				.search-page__top-col
+					input.search-page__field-search(type='search', name='search')
+					.search-page__date
+						input.search-page__field-date(type='text', name='date_from', class='datepicker-from', placeholder='From:')
+						input.search-page__field-date(type='text', name='date_to', class='datepicker-to', placeholder='To:')
+				.search-page__top-col
+					label.search-page__field-sort
+						input(type='checkbox', name='date_sort')
+						span SORT BY DATE
+						+icon('chevron-down')(width='14', height='8')
+			.search-page__wrapper
+				.search-page__col
+					a.search-page__link(href='#')
+						span Search everywhere
+						span 128
+						+icon('chevron-down')(width='14', height='8')
+					a.search-page__link(href='#')
+						span PUBLICATIONS
+						span 32
+						+icon('chevron-down')(width='14', height='8')
+					a.search-page__link(href='#')
+						span NEWS
+						span 32
+						+icon('chevron-down')(width='14', height='8')
+					a.search-page__link(href='#')
+						span EVENTS
+						span 2
+						+icon('chevron-down')(width='14', height='8')
+					.search-page__select.key-words
+						p Author:
+						select
+							option(selected, disabled) FILTER KEY WORDS
+							option NEW MATERIAL
+							option COSMOS
+							option NUCLEAR
+					+check-switcher('Has attachment', 'has_attachment', 'search-page__attachment')
+				.search-page__col
+					h3 Search
+					.search-page__news
+						.search-page__news-item.card-news.card-news--white.card
+							a.link-inset(href='publications-single.html', target='_blank')
+							.card-news__date 27.03.2022
+							h4.card-news__title Call for 2021 Korea-Russia S&T Joint Research Project
+							.card-news__text The Ministry of Science and ICT and National Research Foundation of
+								|  Korea are announcing the Call for 2021 Korea-Russia...
+							.card-news__pdf.pdf
+								a.pdf__download(href='#', download)
+									+icon('download')(width='19', height='18')
+								.pdf__select-wrapper
+									.pdf__select
+										.pdf__select-scroll
+											a(href='#', download)
+												span Brain_Pool_announcement 1
+											a(href='#', download)
+												span Brain_Pool_announcement 2
+								button.pdf__quantity +<span class="js-pdf-quantity">7</span>
+								.pdf__close
+									+icon('close')(width='7', height='7')
+							+tags(['new material', 'cosmos', 'nuclear'], 'card-news__tags')
+						.search-page__news-item.card-news.card-news--white.card
+							a.link-inset(href='publications-single.html', target='_blank')
+							.card-news__date 27.03.2022
+							h4.card-news__title Call for 2021 Korea-Russia
+							.card-news__text The Ministry of Science and ICT and National Research Foundation of
+								|  Korea are announcing the Call for 2021 Korea-Russia...
+							.card-news__pdf.pdf
+								a.pdf__download(href='#', download)
+									+icon('download')(width='19', height='18')
+								.pdf__select-wrapper
+									.pdf__select
+										.pdf__select-scroll
+											a(href='#', download)
+												span Brain_Pool_announcement 1
+											a(href='#', download)
+												span Brain_Pool_announcement 2
+								button.pdf__quantity +<span class="js-pdf-quantity">7</span>
+								.pdf__close
+									+icon('close')(width='7', height='7')
+							+tags(['new material', 'cosmos', 'nuclear'], 'card-news__tags')
+						.search-page__news-item.card-news.card-news--white.card
+							a.link-inset(href='publications-single.html', target='_blank')
+							.card-news__date 27.03.2022
+							h4.card-news__title Call for 2021 Korea-Russia S&T Joint Research Project
+							.card-news__text The Ministry of Science and ICT and National Research Foundation of
+								|  Korea are announcing the Call for 2021 Korea-Russia...
+							.card-news__pdf.pdf
+								a.pdf__download(href='#', download)
+									+icon('download')(width='19', height='18')
+								.pdf__select-wrapper
+									.pdf__select
+										.pdf__select-scroll
+											a(href='#', download)
+												span Brain_Pool_announcement 1
+											a(href='#', download)
+												span Brain_Pool_announcement 2
+								button.pdf__quantity +<span class="js-pdf-quantity">7</span>
+								.pdf__close
+									+icon('close')(width='7', height='7')
+							+tags(['new material', 'cosmos', 'nuclear'], 'card-news__tags')
+						.search-page__news-item.card-news.card-news--white.card
+							a.link-inset(href='publications-single.html', target='_blank')
+							.card-news__date 27.03.2022
+							h4.card-news__title Call for 2021 Korea-Russia S&T Joint Research Project
+							.card-news__text The Ministry of Science and ICT and National Research Foundation of
+								|  Korea are announcing the Call for 2021 Korea-Russia...
+							.card-news__pdf.pdf
+								a.pdf__download(href='#', download)
+									+icon('download')(width='19', height='18')
+								.pdf__select-wrapper
+									.pdf__select
+										.pdf__select-scroll
+											a(href='#', download)
+												span Brain_Pool_announcement 1
+											a(href='#', download)
+												span Brain_Pool_announcement 2
+								button.pdf__quantity +<span class="js-pdf-quantity">7</span>
+								.pdf__close
+									+icon('close')(width='7', height='7')
+							+tags(['new material', 'cosmos', 'nuclear'], 'card-news__tags')
+						.search-page__news-item.card-news.card-news--white.card
+							a.link-inset(href='publications-single.html', target='_blank')
+							.card-news__date 27.03.2022
+							h4.card-news__title Call for 2021 Korea-Russia S&T Joint Research Project
+							.card-news__text The Ministry of Science and ICT and National Research Foundation of
+								|  Korea are announcing the Call for 2021 Korea-Russia...
+							.card-news__pdf.pdf
+								a.pdf__download(href='#', download)
+									+icon('download')(width='19', height='18')
+								.pdf__select-wrapper
+									.pdf__select
+										.pdf__select-scroll
+											a(href='#', download)
+												span Brain_Pool_announcement 1
+											a(href='#', download)
+												span Brain_Pool_announcement 2
+								button.pdf__quantity +<span class="js-pdf-quantity">7</span>
+								.pdf__close
+									+icon('close')(width='7', height='7')
+							+tags(['new material', 'cosmos', 'nuclear'], 'card-news__tags')
+						+pagination('search-page__pagination d-none-flex-mobile')
+						.search-page__button
+							+button('SHOW MORE', 'button--black d-none-flex-desktop', '#')

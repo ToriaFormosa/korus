@@ -1,0 +1,76 @@
+.lang-switcher {
+	width: 90px;
+	height: 38px;
+	border-radius: 18px !important;
+	background-color: $blue-0a;
+	border: none;
+	overflow: hidden;
+	cursor: pointer;
+	transition: 0.3s ease;
+
+	&.open {
+		overflow: visible;
+
+		.lang-switcher__scroll a {
+			pointer-events: auto;
+		}
+	}
+
+	@include hover {
+		background-color: $blue-18;
+	}
+
+	@include max(lg) {
+		display: none;
+	}
+
+	&__list {
+		border-radius: 18px;
+		overflow: hidden;
+	}
+
+	&__scroll {
+		display: flex;
+		flex-direction: column;
+		border-radius: 18px;
+		max-height: 180px;
+		overflow: auto;
+
+		&::-webkit-scrollbar {
+			width: 2px;
+			border-radius: 25px;
+		}
+
+		&::-webkit-scrollbar-track {
+			background-color: transparent;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background: $grey-ca;
+		}
+
+		a {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			height: 38px;
+			padding: 5px 10px;
+			font-family: $secondFont;
+			font-size: 16px;
+			color: $grey-f5;
+			text-transform: uppercase;
+			background-color: $blue-0a;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			white-space: nowrap;
+			pointer-events: none;
+
+			&:hover {
+				text-decoration: underline;
+				text-decoration-color: rgba(245, 245, 245, 0.6);
+				text-decoration-thickness: 3px;
+				text-underline-offset: 4px;
+			}
+		}
+	}
+}

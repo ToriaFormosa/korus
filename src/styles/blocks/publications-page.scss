@@ -1,0 +1,53 @@
+.publications-page {
+	padding: 60px 0 128px;
+
+	@include max(md) {
+		padding: 27px 0 70px;
+	}
+
+	&__filter-tags {
+		margin-top: 64px;
+
+		@include max(md) {
+			margin-top: 29px;
+		}
+	}
+
+	&__grid {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 35px;
+		margin-top: 42px;
+
+		@include max(lg) {
+			gap: 10px;
+			margin-top: 35px;
+		}
+
+		@include max(md) {
+			margin-top: 30px;
+		}
+	}
+
+	&__item {
+		width: calc(50% - 17.5px);
+
+		@include max(lg) {
+			width: calc(50% - 5px);
+		}
+
+		@include max(md) {
+			width: 100%;
+		}
+	}
+
+	&__pagination {
+		margin-top: 64px;
+	}
+
+	&__button {
+		display: flex;
+		justify-content: center;
+		margin-top: 32px;
+	}
+}

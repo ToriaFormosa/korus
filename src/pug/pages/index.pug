@@ -1,0 +1,33 @@
+extends ../layouts/default
+
+block vars
+	-
+		const page = {
+			title: 'Korustec'
+		};
+
+block main
+	.intro
+		.container
+			h1 List of pages
+			ul.list.intro__list
+				li
+					a(href='homepage.html', target='_blank') Homepage
+				li
+					a(href='about.html', target='_blank') About
+				li
+					a(href='events.html', target='_blank') Events
+				li
+					a(href='events-single.html', target='_blank') Events single
+				li
+					a(href='news.html', target='_blank') News
+				li
+					a(href='partners.html', target='_blank') Partners
+				li
+					a(href='publications.html', target='_blank') Publications
+				li
+					a(href='publications-single.html', target='_blank') Publications single
+				li
+					a(href='search.html', target='_blank') Search
+				li
+					a(href='director.html', target='_blank') Director

@@ -1,0 +1,106 @@
+.attachments {
+	$parent: &;
+
+	&__top {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		justify-content: space-between;
+		gap: 10px;
+		background-color: $white;
+		padding: 13px 23px 13px 18px;
+	}
+
+	&__title {
+		font-family: $secondFont;
+		font-size: 16px;
+		line-height: 19px;
+		color: $black-23;
+	}
+
+	&__downloads-num {
+		font-size: 12px;
+		line-height: 14px;
+		font-weight: 300;
+		color: $grey-82;
+	}
+
+	ul#{$parent}__list {
+		margin-top: 10px;
+
+		li {
+			& + li {
+				margin-top: 3px;
+			}
+
+			a {
+				display: inline-flex;
+				align-items: center;
+
+				@include hover {
+					span {
+						color: $blue-0a;
+					}
+				}
+
+				svg {
+					margin-right: 11px;
+				}
+
+				span {
+					font-size: 16px;
+					line-height: 21px;
+					letter-spacing: 0.01em;
+					color: $black-23;
+					transition: 0.3s ease;
+				}
+			}
+		}
+	}
+
+	&__more {
+		display: inline-flex;
+		align-items: center;
+		margin-top: 16px;
+		cursor: pointer;
+
+		@include hover {
+			span {
+				color: $black;
+			}
+
+			#{$parent}__more-icon svg {
+				stroke: $black;
+			}
+		}
+
+		&.open {
+			#{$parent}__more-icon svg {
+				transform: rotate(180deg);
+			}
+		}
+
+		span {
+			font-size: 14px;
+			line-height: 18px;
+			letter-spacing: 0.01em;
+			color: $grey-82;
+			transition: 0.3s ease;
+		}
+	}
+
+	&__more-icon {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 37px;
+		height: 37px;
+		margin-right: 11px;
+		background-color: $white;
+
+		svg {
+			stroke: $grey-82;
+			transition: 0.3s ease;
+		}
+	}
+}

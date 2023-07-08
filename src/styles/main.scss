@@ -1,0 +1,60 @@
+/* base */
+@import "base/var";
+@import "base/reset";
+@import "base/fonts";
+
+/* mixin */
+@import "base/mixin";
+
+/* main */
+@import "partials/main";
+
+/* libs */
+@import "libs/swiper-bundle.min.css";
+@import "libs/aos.css";
+@import "libs/select2.min.css";
+@import "libs/jquery-ui.css";
+@import "libs/fancybox.css";
+
+/* components */
+@import "partials/button";
+@import "partials/heading";
+@import "partials/pdf";
+@import "partials/search";
+@import "partials/lang-switcher";
+@import "partials/tags";
+@import "partials/header";
+@import "partials/footer";
+@import "partials/filter-switcher";
+@import "partials/filter-tags";
+@import "partials/check-switcher";
+@import "partials/key-words";
+@import "partials/pagination";
+@import "partials/caption";
+@import "partials/views";
+@import "partials/attachments";
+
+/* blocks */
+@import "blocks/card-publications";
+@import "blocks/card-news";
+@import "blocks/card-events";
+@import "blocks/card-events-single";
+@import "blocks/table";
+@import "blocks/photo-slider";
+@import "blocks/archive";
+@import "blocks/history";
+@import "blocks/first-screen";
+@import "blocks/mission";
+@import "blocks/publications";
+@import "blocks/news";
+@import "blocks/events";
+@import "blocks/partners";
+@import "blocks/partners-page";
+@import "blocks/publications-page";
+@import "blocks/publications-single";
+@import "blocks/news-page";
+@import "blocks/events-page";
+@import "blocks/events-single";
+@import "blocks/about-page";
+@import "blocks/search-page";
+@import "blocks/director-page";

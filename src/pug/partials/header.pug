@@ -1,0 +1,65 @@
+header.header
+	.container.container--big.header__container
+		.header__col
+			a.header__logo.d-none-mobile(href='/')
+				+icon('logo')(width='243', height='62')
+			a.header__logo.d-none-desktop(href='/')
+				+icon('logo-2')(width='145', height='37')
+			nav.header__menu
+				li
+					a.link-hover-bottom(href='publications.html', target='_blank')
+						span Publications
+				li
+					a.link-hover-bottom(href='news.html', target='_blank')
+						span News
+				li
+					a.link-hover-bottom(href='events.html', target='_blank')
+						span Events
+				li
+					span.link-hover-bottom
+						span Who we are
+						ul
+							li
+								a.link-hover-bottom(href='about.html', target='_blank')
+									span About us
+							li
+								a.link-hover-bottom(href='director.html', target='_blank')
+									span From the Director
+				li
+					a.link-hover-bottom(href='partners.html', target='_blank')
+						span Partners
+		.header__col
+			include search.pug
+			include lang-switcher.pug
+			.header-m
+				input(type='search', name='search', placeholder=' ')
+				.header-m__burger-wrapper
+					.header-m__burger
+						span
+	.header-menu
+		.header-menu__close
+			+icon('close-2')(width='20', height='20')
+		nav
+			li
+				a(href='publications.html', target='_blank') Publications
+			li
+				a(href='news.html', target='_blank') News
+			li
+				a(href='events.html', target='_blank') Events
+			li
+				span Who we are
+				ul
+					li
+						a(href='about.html', target='_blank') About us
+					li
+						a(href='director.html', target='_blank') From the Director
+			li
+				a(href='partners.html', target='_blank') Partners
+		.header-menu__bottom
+			.lang-switcher.lang-switcher--reverse
+				.lang-switcher__list
+					.lang-switcher__scroll
+						a(href='#') ENG
+						a(href='#') KOR
+						a(href='#') RUS
+			include search.pug

@@ -1,0 +1,278 @@
+.events-page {
+	$parent: &;
+
+	padding: 111px 0 128px;
+
+	@include max(md) {
+		padding: 50px 0 70px;
+	}
+
+	&__events {
+		padding: 64px 0 0;
+
+		@include max(md) {
+			padding: 29px 0 0;
+		}
+	}
+
+	&__subtitle {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+
+		span {
+			display: flex;
+			align-items: center;
+			font-family: $secondFont;
+			font-size: 27px;
+			line-height: 33px;
+			font-weight: 700;
+			color: $black;
+
+			@include max(md) {
+				font-size: 20px;
+				line-height: 24px;
+			}
+
+			&::before {
+				content: '';
+				display: block;
+				width: 44px;
+				height: 3px;
+				background-color: $blue-0a;
+				margin-right: 22px;
+
+				@include max(md) {
+					width: 25px;
+					height: 2px;
+					margin-right: 8px;
+				}
+			}
+		}
+	}
+
+	&__slider-overflow {
+		width: 100%;
+		overflow: hidden;
+		padding-bottom: 127px;
+
+		@include max(md) {
+			padding-bottom: 60px;
+		}
+
+		.events__slider {
+			margin-top: 33px;
+
+			@include max(md) {
+				margin-top: 18px;
+			}
+		}
+	}
+
+	&__slider-nav {
+		display: flex;
+		align-items: center;
+		gap: 40px;
+
+		@include max(md) {
+			display: none;
+		}
+	}
+
+	&__slider-prev,
+	&__slider-next {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 30px;
+		height: 30px;
+		cursor: pointer;
+
+		&:not(.swiper-button-disabled) {
+			@include hover {
+				svg {
+					stroke: $blue-0a;
+				}
+			}
+		}
+
+		&.swiper-button-disabled {
+			opacity: 0.5;
+		}
+
+		svg {
+			stroke: $textMainColor;
+			transition: 0.3s ease;
+		}
+	}
+
+	&__slider-prev {
+		svg {
+			transform: rotate(180deg);
+		}
+	}
+
+	&__container-full {
+		max-width: 1600px;
+		margin-top: 42px;
+
+		@include max(md) {
+			margin-top: 17px;
+		}
+	}
+
+	&__block {
+		max-width: 1286px;
+	}
+
+	&__year-list {
+		display: flex;
+
+		@include max(md989) {
+			flex-direction: column;
+		}
+
+		& + #{$parent}__year-list {
+			margin-top: 138px;
+
+			@include max(md) {
+				margin-top: 70px;
+			}
+		}
+
+		&--button {
+			margin-top: 63px !important;
+
+			@include max(md989) {
+				margin-top: 15px !important;
+			}
+		}
+	}
+
+	&__year-digit {
+		width: 544px;
+		font-family: $secondFont;
+		font-size: 404px;
+		line-height: 80%;
+		font-weight: 800;
+		color: $white;
+		margin-left: -15px;
+
+		@include max(lg) {
+			width: 300px;
+			font-size: 200px;
+		}
+
+		@include max(md989) {
+			width: auto;
+			color: $black-23;
+			margin-left: 0;
+		}
+
+		@include max(md) {
+			width: 100%;
+			font-size: 150px;
+			text-align: center;
+		}
+
+		@include max(499) {
+			font-size: 80px;
+		}
+
+		br {
+			@include max(md989) {
+				display: none;
+			}
+		}
+
+		span {
+			position: sticky;
+			top: 0;
+		}
+	}
+
+	&__year-wrapper {
+		flex-grow: 1;
+		margin-left: -83px;
+
+		@include max(md989) {
+			margin-left: 0;
+			margin-top: 50px;
+		}
+	}
+
+	&__card-events-single {
+		& + #{$parent}__card-events-single {
+			margin-top: 64px;
+
+			.card-events-single__image-wrapper {
+				&::after {
+					content: '';
+					display: block;
+					width: 1px;
+					height: 70px;
+					background-color: $grey-ca;
+					position: absolute;
+					bottom: 100%;
+					left: 50%;
+					transform: translateX(-50%);
+
+					@include max(md) {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+
+	&__button {
+		width: 286px;
+		display: flex;
+		justify-content: center;
+		position: relative;
+
+		@include max(md) {
+			width: 100%;
+			margin-top: 32px;
+		}
+
+		&::after {
+			content: '';
+			display: block;
+			width: 1px;
+			height: 70px;
+			background-color: $grey-ca;
+			position: absolute;
+			bottom: 100%;
+			left: 50%;
+			transform: translateX(-50%);
+
+			@include max(md) {
+				display: none;
+			}
+		}
+	}
+
+	&__mobile-caption {
+		& + #{$parent}__mobile-caption {
+			margin-top: 9px;
+		}
+
+		.caption__type {
+			min-width: auto;
+			max-width: 100%;
+			width: 100%;
+			font-size: 14px;
+			line-height: 18px;
+			font-weight: 700;
+			letter-spacing: 0.01em;
+			color: $black-23;
+
+			span {
+				display: block;
+				font-weight: 400;
+				margin-top: 4px;
+			}
+		}
+	}
+}

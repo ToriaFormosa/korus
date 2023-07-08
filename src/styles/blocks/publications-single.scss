@@ -1,0 +1,224 @@
+.publications-single {
+	$parent: &;
+
+	padding: 111px 0 128px;
+
+	@include max(md) {
+		padding: 50px 0 70px;
+	}
+
+	&__main {
+		max-width: 1195px;
+		display: flex;
+		gap: 152px;
+		margin-top: 64px;
+
+		@include max(lg) {
+			flex-direction: column;
+			gap: 50px;
+		}
+
+		@include max(md) {
+			margin-top: 32px;
+		}
+	}
+
+	&__content {
+		@include max(lg) {
+			order: 1;
+		}
+	}
+
+	&__caption-row {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 16px 35px;
+
+		& + #{$parent}__caption-row {
+			margin-top: 16px;
+		}
+	}
+
+	&__filter-tags {
+		margin-top: 32px;
+
+		.filter-tags__row {
+			gap: 10px;
+		}
+
+		.filter-tags__item {
+			@include max(md) {
+				width: calc(50% - 5px);
+				padding: 9px;
+			}
+
+			@include max(499) {
+				width: 100%;
+			}
+		}
+
+		.filter-tags__item:last-of-type {
+			margin-right: 15px;
+
+			@include max(md) {
+				margin-right: 0;
+			}
+		}
+	}
+
+	&__views {
+		@include max(md) {
+			width: 100%;
+		}
+	}
+
+	&__block {
+		margin-top: 128px;
+
+		@include max(lg) {
+			margin-top: 80px;
+		}
+
+		@include max(md) {
+			margin-top: 40px;
+		}
+	}
+
+	&__subtitle {
+		margin-bottom: 32px;
+
+		@include max(md) {
+			margin-bottom: 15px;
+		}
+	}
+
+	&__text,
+	&__list {
+		font-size: 16px;
+		line-height: 21px;
+		letter-spacing: 0.01em;
+		color: $black-23;
+		word-break: break-word;
+
+		@include max(md) {
+			font-size: 14px;
+		}
+
+		p + p {
+			margin-top: 15px;
+
+			@include max(md) {
+				margin-top: 10px;
+			}
+		}
+
+		a {
+			color: $blue-0a;
+
+			@include hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	ul#{$parent}__list {
+		margin-top: 18px;
+
+		li {
+			position: relative;
+			padding-left: 55px;
+			line-height: 19px;
+			letter-spacing: 0.02em;
+			word-break: break-word;
+
+			@include max(md) {
+				padding-left: 32px;
+			}
+
+			& + li {
+				margin-top: 12px;
+			}
+
+			&::before {
+				content: '';
+				display: block;
+				width: 44px;
+				height: 3px;
+				background-color: $blue-0a;
+				position: absolute;
+				top: 8px;
+				left: 0;
+
+				@include max(md) {
+					width: 22px;
+				}
+			}
+		}
+	}
+
+	&__image {
+		height: 0;
+		padding-top: 66.5%;
+		margin-top: 32px;
+		border-radius: 22px;
+		overflow: hidden;
+		position: relative;
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+		}
+	}
+
+	&__back {
+		display: flex;
+		justify-content: flex-end;
+		margin-top: 65px;
+
+		@include max(md) {
+			margin-top: 32px;
+		}
+
+		a {
+			max-width: 120px;
+		}
+	}
+
+	&__sidebar {
+		min-width: 253px;
+		max-width: 253px;
+		width: 100%;
+
+		@include max(lg) {
+			min-width: auto;
+			max-width: 542px;
+		}
+	}
+
+	&__attachments {
+		position: sticky;
+		top: 100px;
+		display: block;
+
+		@include max(lg) {
+			display: none;
+		}
+
+		&--mobile {
+			display: none;
+			margin-top: 30px;
+			position: relative;
+			top: unset;
+
+			@include max(lg) {
+				display: block;
+			}
+		}
+	}
+}

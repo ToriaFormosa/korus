@@ -1,0 +1,80 @@
+.card-news {
+	$parent: &;
+	display: flex;
+	flex-direction: column;
+	background: $grey-f5;
+	box-shadow: 0 5px 10px 3px rgba(0, 0, 0, 0.05);
+	padding: 33px 20px 50px;
+	height: auto;
+	position: relative;
+
+	@include max(lg) {
+		padding: 20px 11px;
+	}
+
+	@include max(md) {
+		padding: 20px 11px 24px;
+	}
+
+	@include hover {
+		#{$parent}__title {
+			text-decoration-color: inherit;
+		}
+	}
+
+	&__date {
+		font-size: 12px;
+		line-height: 14px;
+		font-weight: 500;
+		color: $black-23;
+	}
+
+	&__title {
+		margin-top: 4px;
+		flex-grow: 1;
+		text-decoration: underline;
+		text-underline-offset: 6px;
+		text-decoration-color: transparent;
+		transition: 0.4s ease;
+
+		@include max(md) {
+			margin-top: 7px;
+		}
+	}
+
+	&__text {
+		font-size: 16px;
+		line-height: 21px;
+		margin-top: 23px;
+
+		@include max(lg) {
+			font-size: 14px;
+			line-height: 18px;
+		}
+
+		@include max(md) {
+			margin-top: 11px;
+		}
+	}
+
+	&__pdf {
+		margin-top: 37px;
+		z-index: 9;
+
+		@include max(md) {
+			margin-top: 50px;
+		}
+	}
+
+	&__tags {
+		margin-top: 24px;
+
+		@include max(md) {
+			margin-top: 15px;
+		}
+	}
+
+	&--white {
+		background-color: $white;
+	}
+}

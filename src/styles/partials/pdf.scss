@@ -1,0 +1,175 @@
+.pdf {
+	$parent: &;
+
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	position: relative;
+	z-index: 8;
+
+	@include max(md) {
+		gap: 12px;
+	}
+
+	&__select-wrapper {
+		width: 206px;
+		height: 30px;
+		border-radius: 15px !important;
+		background-color: $white;
+		border: 1px solid $grey-ca;
+		position: relative;
+		overflow: hidden;
+		cursor: pointer;
+
+		@include hover {
+			& + #{$parent}__quantity {
+				border-color: $black;
+				color: $black;
+			}
+		}
+
+		&.open {
+			overflow: visible;
+
+			.pdf__select {
+				a {
+					pointer-events: auto;
+				}
+			}
+
+			.pdf__select-scroll {
+				overflow: auto;
+			}
+		}
+
+		@include max(lg) {
+			order: 1;
+			flex-grow: 1;
+		}
+	}
+
+	&__download {
+		display: inline-flex;
+
+		@include hover {
+			svg {
+				fill: $black-23;
+			}
+		}
+
+		svg {
+			fill: $grey-ca;
+			transition: 0.3s ease;
+		}
+	}
+
+	&__select-scroll {
+		max-height: 160px;
+		overflow: hidden;
+		padding-right: 10px;
+
+		&::-webkit-scrollbar {
+			width: 2px;
+			border-radius: 25px;
+		}
+
+		&::-webkit-scrollbar-track {
+			background-color: transparent;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background: $grey-ca;
+		}
+	}
+
+	&__select {
+		width: calc(100% + 2px);
+		padding: 0 2px 0 12px;
+		border-radius: 15px !important;
+		background-color: $white;
+		border: 1px solid $grey-ca;
+		margin-top: -1px;
+		margin-left: -1px;
+		position: relative;
+		z-index: 1;
+		overflow: hidden;
+		transition: 0.3s ease;
+
+		a {
+			display: flex;
+			align-items: center;
+			height: 30px;
+			font-size: 12px;
+			color: $black-23;
+			pointer-events: none;
+			transition: 0.3s ease;
+
+			@include hover {
+				color: $blue-29;
+			}
+
+			span {
+				text-overflow: ellipsis;
+				white-space: nowrap;
+				overflow: hidden;
+			}
+
+			&::before {
+				content: 'PDF';
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				min-width: 25px;
+				max-width: 25px;
+				height: 16px;
+				border-radius: 3px;
+				background-color: $red;
+				font-family: $thirdFont;
+				font-size: 10px;
+				color: $white;
+				text-transform: uppercase;
+				margin-right: 5px;
+			}
+		}
+	}
+
+	&__quantity,
+	&__close {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 29px;
+		height: 29px;
+		border-radius: 50%;
+		cursor: pointer;
+	}
+
+	&__quantity {
+		border: 1px solid $grey-ca;
+		background-color: transparent;
+		font-size: 12px;
+		line-height: 14px;
+		font-weight: 300;
+		color: rgba($black-23, 0.8);
+		transition: 0.3s ease;
+
+		@include hover {
+			border-color: $black;
+			color: $black;
+		}
+	}
+
+	&__close {
+		display: none;
+		background-color: $black-23;
+		transition: 0.3s ease;
+
+		@include hover {
+			opacity: 0.9;
+		}
+
+		svg {
+			stroke: $white;
+		}
+	}
+}

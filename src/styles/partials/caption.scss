@@ -1,0 +1,45 @@
+.caption {
+	$parent: &;
+
+	display: flex;
+	align-items: flex-start;
+	gap: 16px;
+	width: auto;
+
+	@include max(md) {
+		gap: 10px;
+	}
+
+	&__type,
+	&__text {
+		padding: 11.5px 18px;
+		background-color: $white;
+		font-size: 16px;
+		line-height: 130%;
+		letter-spacing: 0.01em;
+		color: $black-23;
+	}
+
+	&__type {
+		min-width: 253px;
+		max-width: 253px;
+		border-left: 3px solid $blue-0a;
+	}
+
+	&__text {
+		flex-grow: 1;
+	}
+
+	&--with-text {
+		#{$parent} {
+			&__type,
+			&__text {
+				@include max(md) {
+					min-width: auto;
+					max-width: 100%;
+					width: calc(50% - 5px);
+				}
+			}
+		}
+	}
+}

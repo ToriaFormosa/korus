@@ -1,0 +1,159 @@
+extends ../layouts/default
+
+block vars
+	-
+		const page = {
+			title: 'Publication | Korustec'
+		};
+	- let mainModClass = 'main--visible';
+
+block main
+	.publications-single
+		.container
+			h1.h2 Russian S&T Daily Digest on 26.08.2022
+			.publications-single__main
+				.publications-single__content
+					.publications-single__caption-row
+						+caption('Category: ', 'Daily', '', 'publications-single__caption')
+						+caption('Author : ', 'Jitaek Jo', '', 'publications-single__caption')
+					.publications-single__caption-row
+						+caption('Pages : ', '1', '', 'publications-single__caption')
+					.publications-single__caption-row
+						+caption('Date : ', '26.08.2022', '', 'publications-single__caption')
+					.publications-single__filter-tags.filter-tags.filter-tags--outline
+						.filter-tags__row
+							a.filter-tags__item(href='#', target='_blank') #NEW MATERIAL
+							a.filter-tags__item(href='#', target='_blank') #COSMOS
+							a.filter-tags__item(href='#', target='_blank') #ANOTHER TAG
+							.publications-single__views.views
+								.views__icon
+									+icon('views')(width='30', height='30')
+								.views__digit 122
+					.publications-single__attachments.publications-single__attachments--mobile.attachments
+						.attachments__top
+							.attachments__title Attachments
+							.attachments__downloads-num 25 downloads
+						ul.attachments__list
+							li
+								a(href='#')
+									+icon('pdf')(width='37', height='37')
+									span 20220826-daily-digest.pdf
+							li
+								a(href='#')
+									+icon('pdf')(width='37', height='37')
+									span file_name.pdf
+							li
+								a(href='#')
+									+icon('pdf')(width='37', height='37')
+									span another_file_name.pdf
+							li
+								ul(style='display: none')
+									li
+										a(href='#')
+											+icon('pdf')(width='37', height='37')
+											span 20220826-daily-digest.pdf
+									li
+										a(href='#')
+											+icon('pdf')(width='37', height='37')
+											span file_name.pdf
+									li
+										a(href='#')
+											+icon('pdf')(width='37', height='37')
+											span another_file_name.pdf
+						.attachments__more.js-attachments-toggle
+							.attachments__more-icon
+								+icon('chevron-down')(width='14', height='8')
+							span Show more
+					.publications-single__block
+						h3.publications-single__subtitle Header h3
+						.publications-single__text
+							p Russian <b>specialists</b> were the first in the world to learn how to control
+								|  the mechanical properties of high-strength steel products printed on a 3D printer, according to the official
+								|  website of the Ministry of Education and Science of the Russian
+								|  Federation <a href="https://www.metalinfo.ru/ru/news/139778" target="_blank">https://www.metalinfo.ru/ru/news/139778</a>
+							p Russian specialists were the first in the world to learn how to control the mechanical properties of high-strength
+								|  steel products printed on a 3D printer, according to the official website of the Ministry of Education and
+								|  Science of the Russian Federation.
+							p Russian scientists have developed a new highly efficient catalyst for the industrial processing of carbon
+								|  dioxide, one of the culprits of global warming. Its key characteristics are a simple method of obtaining
+								|  and low cost. Russian scientists have developed a new highly efficient catalyst for the industrial
+								|  processing of carbon dioxide, one of the culprits of global warming. Its key characteristics are a simple
+								|  method of obtaining and low cost. Russian scientists have developed a new highly efficient
+								|  catalyst for the industrial processing of carbon dioxide, one of the culprits of global warming.
+								|  Its key characteristics are a simple method of obtaining and low cost.
+						ul.publications-single__list
+							li Russian specialists were the first in the world to learn how to control the mechanical
+								|  properties of high-strength steel products printed on a 3D printer, according to the official
+								|  website of the Ministry of Education and Science of the Russian
+								|  Federation <a href="https://www.metalinfo.ru/ru/news/139778" target="_blank">https://www.metalinfo.ru/ru/news/139778</a>
+							li Russian scientists have created an environmentally friendly and economical method for producing hydrogels
+								|  from waste paper. The development will allow agricultural enterprises to use water resources more rationally
+								|  and help in the disposal of paper waste.
+							li Russian scientists have developed a new highly efficient catalyst for the industrial processing of carbon dioxide
+						.publications-single__image
+							img(src='images/publication.jpg', srcset='images/publication@2x.jpg 2x', alt='')
+					.publications-single__block
+						h3.publications-single__subtitle Header h3
+						.publications-single__text
+							p Russian specialists were the first in the world to learn how to control
+								|  the mechanical properties of high-strength steel products printed on a 3D printer, according to the official
+								|  website of the Ministry of Education and Science of the Russian
+								|  Federation <a href="https://www.metalinfo.ru/ru/news/139778" target="_blank">https://www.metalinfo.ru/ru/news/139778</a>
+							p Russian specialists were the first in the world to learn how to control the mechanical properties of high-strength
+								|  steel products printed on a 3D printer, according to the official website of the Ministry of Education and
+								|  Science of the Russian Federation.
+							p Russian scientists have developed a new highly efficient catalyst for the industrial processing of carbon
+								|  dioxide, one of the culprits of global warming. Its key characteristics are a simple method of obtaining
+								|  and low cost. Russian scientists have developed a new highly efficient catalyst for the industrial
+								|  processing of carbon dioxide, one of the culprits of global warming. Its key characteristics are a simple
+								|  method of obtaining and low cost. Russian scientists have developed a new highly efficient
+								|  catalyst for the industrial processing of carbon dioxide, one of the culprits of global warming.
+								|  Its key characteristics are a simple method of obtaining and low cost.
+						ul.publications-single__list
+							li Russian specialists were the first in the world to learn how to control the mechanical
+								|  properties of high-strength steel products printed on a 3D printer, according to the official
+								|  website of the Ministry of Education and Science of the Russian
+								|  Federation <a href="https://www.metalinfo.ru/ru/news/139778" target="_blank">https://www.metalinfo.ru/ru/news/139778</a>
+							li Russian scientists have created an environmentally friendly and economical method for producing hydrogels
+								|  from waste paper. The development will allow agricultural enterprises to use water resources more rationally
+								|  and help in the disposal of paper waste.
+							li Russian scientists have developed a new highly efficient catalyst for the industrial processing of carbon dioxide
+					.publications-single__back
+						+button('BACK', 'button--black', '#')
+
+				.publications-single__sidebar
+					.publications-single__attachments.attachments
+						.attachments__top
+							.attachments__title Attachments
+							.attachments__downloads-num 25 downloads
+						ul.attachments__list
+							li
+								a(href='#')
+									+icon('pdf')(width='37', height='37')
+									span 20220826-daily-digest.pdf
+							li
+								a(href='#')
+									+icon('pdf')(width='37', height='37')
+									span file_name.pdf
+							li
+								a(href='#')
+									+icon('pdf')(width='37', height='37')
+									span another_file_name.pdf
+							li
+								ul(style='display: none')
+									li
+										a(href='#')
+											+icon('pdf')(width='37', height='37')
+											span 20220826-daily-digest.pdf
+									li
+										a(href='#')
+											+icon('pdf')(width='37', height='37')
+											span file_name.pdf
+									li
+										a(href='#')
+											+icon('pdf')(width='37', height='37')
+											span another_file_name.pdf
+						.attachments__more.js-attachments-toggle
+							.attachments__more-icon
+								+icon('chevron-down')(width='14', height='8')
+							span Show more

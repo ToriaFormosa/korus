@@ -1,0 +1,6 @@
+mixin heading(title, className)
+	.heading(class=className)
+		h2!= title
+		a.heading__all.link-hover-bottom(href='#')
+			span See all
+			+icon('chevron-right')

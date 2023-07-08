@@ -1,0 +1,39 @@
+.publications {
+	padding: 170px 0;
+
+	@include max(lg) {
+		padding: 121px 0;
+	}
+
+	@include max(md) {
+		padding: 60px 0;
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 35px;
+		margin-top: 58px;
+
+		@include max(lg) {
+			gap: 10px;
+			margin-top: 35px;
+		}
+
+		@include max(md) {
+			margin-top: 25px;
+		}
+	}
+
+	&__item {
+		width: calc(50% - 17.5px);
+
+		@include max(lg) {
+			width: calc(50% - 5px);
+		}
+
+		@include max(md) {
+			width: 100%;
+		}
+	}
+}

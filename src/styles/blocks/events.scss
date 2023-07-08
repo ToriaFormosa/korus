@@ -1,0 +1,23 @@
+.events {
+	padding: 168px 0;
+
+	@include max(lg) {
+		padding: 121px 0 80px;
+	}
+
+	@include max(md) {
+		padding: 60px 0;
+	}
+
+	&__slider {
+		margin-top: 60px;
+
+		@include max(lg) {
+			margin-top: 34px;
+		}
+
+		@include max(md) {
+			margin-top: 25px;
+		}
+	}
+}

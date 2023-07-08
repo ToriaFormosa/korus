@@ -1,0 +1,41 @@
+.news {
+	padding: 126px 0 216px;
+	background-color: $black;
+
+	@include max(lg) {
+		padding: 89px 0;
+	}
+
+	@include max(md) {
+		padding: 50px 0;
+	}
+
+	&__slider {
+		margin-top: 58px;
+
+		@include max(lg) {
+			margin-top: 35px;
+		}
+
+		@include max(md) {
+			margin-top: 24px;
+		}
+
+		.swiper-wrapper {
+			@include max(lg) {
+				flex-wrap: wrap;
+				gap: 10px;
+			}
+		}
+	}
+
+	&__item {
+		@include max(lg) {
+			width: calc(50% - 5px);
+		}
+
+		@include max(md) {
+			width: 100%;
+		}
+	}
+}

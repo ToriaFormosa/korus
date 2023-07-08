@@ -1,0 +1,599 @@
+extends ../layouts/default
+
+block vars
+	-
+		const page = {
+			title: 'Publications | Korustec'
+		};
+
+block main
+	.publications-page
+		.container
+			h1 Publications
+			.publications-page__filter-tags.filter-tags
+				.filter-tags__row.filter-tags__row--w50
+					a.filter-tags__item(href='#', target='_blank') DAILY
+					a.filter-tags__item(href='#', target='_blank') MONTHLY
+					+check-switcher('Has attachment', 'has_attachment', 'd-none-flex-mobile')
+				.filter-tags__row
+					a.filter-tags__item(href='#', target='_blank') KEY STI PROGRAMS
+					a.filter-tags__item(href='#', target='_blank') Technology Digest by field
+					a.filter-tags__item(href='#', target='_blank') Issue paper
+					+check-switcher('Has attachment', 'has_attachment', 'd-none-flex-desktop')
+					.filter-tags__key-words.key-words
+						select
+							option(selected, disabled) FILTER KEY WORDS
+							option NEW MATERIAL
+							option COSMOS
+							option NUCLEAR
+			.publications-page__grid
+				.publications-page__item.card-publications.card
+					a.link-inset(href='publications-single.html', target='_blank')
+					.card-publications__wrapper
+						.card-publications__col
+							.card-publications__image-wrapper
+								.card-publications__image
+									img(src='images/publications/1.jpg', srcset='images/publications/1@2x.jpg 2x', alt='')
+						.card-publications__col
+							h4 Call for 2021 Korea-Russia S&T Joint Research Project
+							.card-publications__text The Ministry of Science and ICT and National Research Foundation of Korea are
+								|  announcing the Call for 2021 Korea-Russia Joint. The Call for 2021 Korea-Russia Joint...
+							.card-publications__pdf.pdf
+								a.pdf__download(href='#', download)
+									+icon('download')(width='19', height='18')
+								.pdf__select-wrapper
+									.pdf__select
+										.pdf__select-scroll
+											a(href='#', download)
+												span Brain_Pool_announcement 1
+											a(href='#', download)
+												span Brain_Pool_announcement 2
+											a(href='#', download)
+												span Brain_Pool_announcement 1
+											a(href='#', download)
+												span Brain_Pool_announcement 2
+											a(href='#', download)
+												span Brain_Pool_announcement 1
+											a(href='#', download)
+												span Brain_Pool_announcement 2
+											a(href='#', download)
+												span Brain_Pool_announcement 1
+											a(href='#', download)
+												span Brain_Pool_announcement 2
+											a(href='#', download)
+												span Brain_Pool_announcement 1
+											a(href='#', download)
+												span Brain_Pool_announcement 2
+											a(href='#', download)
+												span Brain_Pool_announcement 1
+											a(href='#', download)
+												span Brain_Pool_announcement 2
+											a(href='#', download)
+												span Brain_Pool_announcement 1
+											a(href='#', download)
+												span Brain_Pool_announcement 2
+											a(href='#', download)
+												span Brain_Pool_announcement 1
+											a(href='#', download)
+												span Brain_Pool_announcement 2
+								button.pdf__quantity +<span class="js-pdf-quantity">7</span>
+								.pdf__close
+									+icon('close')(width='7', height='7')
+					.card-publications__bottom
+						+tags(['new material', 'cosmos', 'nuclear'])
+						.card-publications__date 26.03.2022
+				.publications-page__item.card-publications.card
+					a.link-inset(href='publications-single.html', target='_blank')
+					.card-publications__wrapper
+						.card-publications__col
+							.card-publications__image-wrapper
+								.card-publications__image
+									img(src='images/publications/1.jpg', srcset='images/publications/1@2x.jpg 2x', alt='')
+						.card-publications__col
+							h4 Russian S&T Daily Digest on
+							.card-publications__text The Ministry of Science and ICT and National Research Foundation of Korea are
+								|  announcing the Call for 2021 Korea-Russia Joint. The Call for 2021 Korea-Russia Joint...
+							.card-publications__pdf.pdf
+								a.pdf__download(href='#', download)
+									+icon('download')(width='19', height='18')
+								.pdf__select-wrapper
+									.pdf__select
+										.pdf__select-scroll
+											a(href='#', download)
+												span Brain_Pool_announcement 1
+											a(href='#', download)
+												span Brain_Pool_announcement 2
+											a(href='#', download)
+												span Brain_Pool_announcement 1
+											a(href='#', download)
+												span Brain_Pool_announcement 2
+											a(href='#', download)
+												span Brain_Pool_announcement 1
+											a(href='#', download)
+												span Brain_Pool_announcement 2
+											a(href='#', download)
+												span Brain_Pool_announcement 1
+											a(href='#', download)
+												span Brain_Pool_announcement 2
+								button.pdf__quantity +<span class="js-pdf-quantity">7</span>
+								.pdf__close
+									+icon('close')(width='7', height='7')
+					.card-publications__bottom
+						+tags(['new material', 'cosmos', 'nuclear'])
+						.card-publications__date 26.03.2022
+				.publications-page__item.card-publications.card
+					a.link-inset(href='publications-single.html', target='_blank')
+					.card-publications__wrapper
+						.card-publications__col
+							.card-publications__image-wrapper
+								.card-publications__image
+									img(src='images/publications/1.jpg', srcset='images/publications/1@2x.jpg 2x', alt='')
+						.card-publications__col
+							h4 Russian S&T Daily Digest on
+							.card-publications__text The Ministry of Science and ICT and National Research Foundation of Korea are
+								|  announcing the Call for 2021 Korea-Russia Joint. The Call for 2021 Korea-Russia Joint...
+							.card-publications__pdf.pdf
+								a.pdf__download(href='#', download)
+									+icon('download')(width='19', height='18')
+								.pdf__select-wrapper
+									.pdf__select
+										.pdf__select-scroll
+											a(href='#', download)
+												span Brain_Pool_announcement 1
+											a(href='#', download)
+												span Brain_Pool_announcement 2
+											a(href='#', download)
+												span Brain_Pool_announcement 1
+											a(href='#', download)
+												span Brain_Pool_announcement 2
+											a(href='#', download)
+												span Brain_Pool_announcement 1
+											a(href='#', download)
+												span Brain_Pool_announcement 2
+											a(href='#', download)
+												span Brain_Pool_announcement 1
+											a(href='#', download)
+												span Brain_Pool_announcement 2
+								button.pdf__quantity +<span class="js-pdf-quantity">7</span>
+								.pdf__close
+									+icon('close')(width='7', height='7')
+					.card-publications__bottom
+						+tags(['new material', 'cosmos', 'nuclear'])
+						.card-publications__date 26.03.2022
+				.publications-page__item.card-publications.card
+					a.link-inset(href='publications-single.html', target='_blank')
+					.card-publications__wrapper
+						.card-publications__col
+							.card-publications__image-wrapper
+								.card-publications__image
+									img(src='images/publications/1.jpg', srcset='images/publications/1@2x.jpg 2x', alt='')
+						.card-publications__col
+							h4 Call for 2021 Korea-Russia S&T Joint Research Project
+							.card-publications__text The Ministry of Science and ICT and National Research Foundation of Korea are
+								|  announcing the Call for 2021 Korea-Russia Joint. The Call for 2021 Korea-Russia Joint...
+							.card-publications__pdf.pdf
+								a.pdf__download(href='#', download)
+									+icon('download')(width='19', height='18')
+								.pdf__select-wrapper
+									.pdf__select
+										.pdf__select-scroll
+											a(href='#', download)
+												span Brain_Pool_announcement 1
+											a(href='#', download)
+												span Brain_Pool_announcement 2
+											a(href='#', download)
+												span Brain_Pool_announcement 1
+											a(href='#', download)
+												span Brain_Pool_announcement 2
+											a(href='#', download)
+												span Brain_Pool_announcement 1
+											a(href='#', download)
+												span Brain_Pool_announcement 2
+											a(href='#', download)
+												span Brain_Pool_announcement 1
+											a(href='#', download)
+												span Brain_Pool_announcement 2
+								button.pdf__quantity +<span class="js-pdf-quantity">7</span>
+								.pdf__close
+									+icon('close')(width='7', height='7')
+					.card-publications__bottom
+						+tags(['new material', 'cosmos', 'nuclear'])
+						.card-publications__date 26.03.2022
+				.publications-page__item.card-publications.card
+					a.link-inset(href='publications-single.html', target='_blank')
+					.card-publications__wrapper
+						.card-publications__col
+							.card-publications__image-wrapper
+								.card-publications__image
+									img(src='images/publications/1.jpg', srcset='images/publications/1@2x.jpg 2x', alt='')
+						.card-publications__col
+							h4 Call for 2021 Korea-Russia S&T Joint Research Project
+							.card-publications__text The Ministry of Science and ICT and National Research Foundation of Korea are
+								|  announcing the Call for 2021 Korea-Russia Joint. The Call for 2021 Korea-Russia Joint...
+							.card-publications__pdf.pdf
+								a.pdf__download(href='#', download)
+									+icon('download')(width='19', height='18')
+								.pdf__select-wrapper
+									.pdf__select
+										.pdf__select-scroll
+											a(href='#', download)
+												span Brain_Pool_announcement 1
+											a(href='#', download)
+												span Brain_Pool_announcement 2
+											a(href='#', download)
+												span Brain_Pool_announcement 1
+											a(href='#', download)
+												span Brain_Pool_announcement 2
+											a(href='#', download)
+												span Brain_Pool_announcement 1
+											a(href='#', download)
+												span Brain_Pool_announcement 2
+											a(href='#', download)
+												span Brain_Pool_announcement 1
+											a(href='#', download)
+												span Brain_Pool_announcement 2
+								button.pdf__quantity +<span class="js-pdf-quantity">7</span>
+								.pdf__close
+									+icon('close')(width='7', height='7')
+					.card-publications__bottom
+						+tags(['new material', 'cosmos', 'nuclear'])
+						.card-publications__date 26.03.2022
+				.publications-page__item.card-publications.card
+					a.link-inset(href='publications-single.html', target='_blank')
+					.card-publications__wrapper
+						.card-publications__col
+							.card-publications__image-wrapper
+								.card-publications__image
+									img(src='images/publications/1.jpg', srcset='images/publications/1@2x.jpg 2x', alt='')
+						.card-publications__col
+							h4 Russian S&T Daily Digest on
+							.card-publications__text The Ministry of Science and ICT and National Research Foundation of Korea are
+								|  announcing the Call for 2021 Korea-Russia Joint. The Call for 2021 Korea-Russia Joint...
+							.card-publications__pdf.pdf
+								a.pdf__download(href='#', download)
+									+icon('download')(width='19', height='18')
+								.pdf__select-wrapper
+									.pdf__select
+										.pdf__select-scroll
+											a(href='#', download)
+												span Brain_Pool_announcement 1
+											a(href='#', download)
+												span Brain_Pool_announcement 2
+											a(href='#', download)
+												span Brain_Pool_announcement 1
+											a(href='#', download)
+												span Brain_Pool_announcement 2
+											a(href='#', download)
+												span Brain_Pool_announcement 1
+											a(href='#', download)
+												span Brain_Pool_announcement 2
+											a(href='#', download)
+												span Brain_Pool_announcement 1
+											a(href='#', download)
+												span Brain_Pool_announcement 2
+								button.pdf__quantity +<span class="js-pdf-quantity">7</span>
+								.pdf__close
+									+icon('close')(width='7', height='7')
+					.card-publications__bottom
+						+tags(['new material', 'cosmos', 'nuclear'])
+						.card-publications__date 26.03.2022
+				.publications-page__item.card-publications.card
+					a.link-inset(href='publications-single.html', target='_blank')
+					.card-publications__wrapper
+						.card-publications__col
+							.card-publications__image-wrapper
+								.card-publications__image
+									img(src='images/publications/1.jpg', srcset='images/publications/1@2x.jpg 2x', alt='')
+						.card-publications__col
+							h4 Russian S&T Daily Digest on
+							.card-publications__text The Ministry of Science and ICT and National Research Foundation of Korea are
+								|  announcing the Call for 2021 Korea-Russia Joint. The Call for 2021 Korea-Russia Joint...
+							.card-publications__pdf.pdf
+								a.pdf__download(href='#', download)
+									+icon('download')(width='19', height='18')
+								.pdf__select-wrapper
+									.pdf__select
+										.pdf__select-scroll
+											a(href='#', download)
+												span Brain_Pool_announcement 1
+											a(href='#', download)
+												span Brain_Pool_announcement 2
+											a(href='#', download)
+												span Brain_Pool_announcement 1
+											a(href='#', download)
+												span Brain_Pool_announcement 2
+											a(href='#', download)
+												span Brain_Pool_announcement 1
+											a(href='#', download)
+												span Brain_Pool_announcement 2
+											a(href='#', download)
+												span Brain_Pool_announcement 1
+											a(href='#', download)
+												span Brain_Pool_announcement 2
+								button.pdf__quantity +<span class="js-pdf-quantity">7</span>
+								.pdf__close
+									+icon('close')(width='7', height='7')
+					.card-publications__bottom
+						+tags(['new material', 'cosmos', 'nuclear'])
+						.card-publications__date 26.03.2022
+				.publications-page__item.card-publications.card
+					a.link-inset(href='publications-single.html', target='_blank')
+					.card-publications__wrapper
+						.card-publications__col
+							.card-publications__image-wrapper
+								.card-publications__image
+									img(src='images/publications/1.jpg', srcset='images/publications/1@2x.jpg 2x', alt='')
+						.card-publications__col
+							h4 Call for 2021 Korea-Russia S&T Joint Research Project
+							.card-publications__text The Ministry of Science and ICT and National Research Foundation of Korea are
+								|  announcing the Call for 2021 Korea-Russia Joint. The Call for 2021 Korea-Russia Joint...
+							.card-publications__pdf.pdf
+								a.pdf__download(href='#', download)
+									+icon('download')(width='19', height='18')
+								.pdf__select-wrapper
+									.pdf__select
+										.pdf__select-scroll
+											a(href='#', download)
+												span Brain_Pool_announcement 1
+											a(href='#', download)
+												span Brain_Pool_announcement 2
+											a(href='#', download)
+												span Brain_Pool_announcement 1
+											a(href='#', download)
+												span Brain_Pool_announcement 2
+											a(href='#', download)
+												span Brain_Pool_announcement 1
+											a(href='#', download)
+												span Brain_Pool_announcement 2
+											a(href='#', download)
+												span Brain_Pool_announcement 1
+											a(href='#', download)
+												span Brain_Pool_announcement 2
+								button.pdf__quantity +<span class="js-pdf-quantity">7</span>
+								.pdf__close
+									+icon('close')(width='7', height='7')
+					.card-publications__bottom
+						+tags(['new material', 'cosmos', 'nuclear'])
+						.card-publications__date 26.03.2022
+				.publications-page__item.card-publications.card
+					a.link-inset(href='publications-single.html', target='_blank')
+					.card-publications__wrapper
+						.card-publications__col
+							.card-publications__image-wrapper
+								.card-publications__image
+									img(src='images/publications/1.jpg', srcset='images/publications/1@2x.jpg 2x', alt='')
+						.card-publications__col
+							h4 Russian S&T Daily Digest on
+							.card-publications__text The Ministry of Science and ICT and National Research Foundation of Korea are
+								|  announcing the Call for 2021 Korea-Russia Joint. The Call for 2021 Korea-Russia Joint...
+							.card-publications__pdf.pdf
+								a.pdf__download(href='#', download)
+									+icon('download')(width='19', height='18')
+								.pdf__select-wrapper
+									.pdf__select
+										.pdf__select-scroll
+											a(href='#', download)
+												span Brain_Pool_announcement 1
+											a(href='#', download)
+												span Brain_Pool_announcement 2
+											a(href='#', download)
+												span Brain_Pool_announcement 1
+											a(href='#', download)
+												span Brain_Pool_announcement 2
+											a(href='#', download)
+												span Brain_Pool_announcement 1
+											a(href='#', download)
+												span Brain_Pool_announcement 2
+											a(href='#', download)
+												span Brain_Pool_announcement 1
+											a(href='#', download)
+												span Brain_Pool_announcement 2
+								button.pdf__quantity +<span class="js-pdf-quantity">7</span>
+								.pdf__close
+									+icon('close')(width='7', height='7')
+					.card-publications__bottom
+						+tags(['new material', 'cosmos', 'nuclear'])
+						.card-publications__date 26.03.2022
+				.publications-page__item.card-publications.card
+					a.link-inset(href='publications-single.html', target='_blank')
+					.card-publications__wrapper
+						.card-publications__col
+							.card-publications__image-wrapper
+								.card-publications__image
+									img(src='images/publications/1.jpg', srcset='images/publications/1@2x.jpg 2x', alt='')
+						.card-publications__col
+							h4 Call for 2021 Korea-Russia S&T Joint Research Project
+							.card-publications__text The Ministry of Science and ICT and National Research Foundation of Korea are
+								|  announcing the Call for 2021 Korea-Russia Joint. The Call for 2021 Korea-Russia Joint...
+							.card-publications__pdf.pdf
+								a.pdf__download(href='#', download)
+									+icon('download')(width='19', height='18')
+								.pdf__select-wrapper
+									.pdf__select
+										.pdf__select-scroll
+											a(href='#', download)
+												span Brain_Pool_announcement 1
+											a(href='#', download)
+												span Brain_Pool_announcement 2
+											a(href='#', download)
+												span Brain_Pool_announcement 1
+											a(href='#', download)
+												span Brain_Pool_announcement 2
+											a(href='#', download)
+												span Brain_Pool_announcement 1
+											a(href='#', download)
+												span Brain_Pool_announcement 2
+											a(href='#', download)
+												span Brain_Pool_announcement 1
+											a(href='#', download)
+												span Brain_Pool_announcement 2
+								button.pdf__quantity +<span class="js-pdf-quantity">7</span>
+								.pdf__close
+									+icon('close')(width='7', height='7')
+					.card-publications__bottom
+						+tags(['new material', 'cosmos', 'nuclear'])
+						.card-publications__date 26.03.2022
+			.archive
+				.archive__top
+					.archive__title Archive of publications
+					+button('OPEN', 'button--black archive__btn js-content-toggle')
+				.archive__grid(style='display: none')
+					.archive__item.card-publications
+						a.link-inset(href='publications-single.html', target='_blank')
+						.card-publications__wrapper
+							.card-publications__col
+								.card-publications__image-wrapper
+									.card-publications__image
+										img(src='images/publications/1.jpg', srcset='images/publications/1@2x.jpg 2x', alt='')
+							.card-publications__col
+								h4 Call for 2021 Korea-Russia S&T Joint Research Project
+								.card-publications__text The Ministry of Science and ICT and National Research Foundation of Korea are
+									|  announcing the Call for 2021 Korea-Russia Joint. The Call for 2021 Korea-Russia Joint...
+								.card-publications__pdf.pdf
+									a.pdf__download(href='#', download)
+										+icon('download')(width='19', height='18')
+									.pdf__select-wrapper
+										.pdf__select
+											.pdf__select-scroll
+												a(href='#', download)
+													span Brain_Pool_announcement 1
+												a(href='#', download)
+													span Brain_Pool_announcement 2
+												a(href='#', download)
+													span Brain_Pool_announcement 1
+												a(href='#', download)
+													span Brain_Pool_announcement 2
+												a(href='#', download)
+													span Brain_Pool_announcement 1
+												a(href='#', download)
+													span Brain_Pool_announcement 2
+												a(href='#', download)
+													span Brain_Pool_announcement 1
+												a(href='#', download)
+													span Brain_Pool_announcement 2
+									button.pdf__quantity +<span class="js-pdf-quantity">7</span>
+									.pdf__close
+										+icon('close')(width='7', height='7')
+						.card-publications__bottom
+							+tags(['new material', 'cosmos', 'nuclear'])
+							.card-publications__date 26.03.2022
+					.archive__item.card-publications
+						a.link-inset(href='publications-single.html', target='_blank')
+						.card-publications__wrapper
+							.card-publications__col
+								.card-publications__image-wrapper
+									.card-publications__image
+										img(src='images/publications/1.jpg', srcset='images/publications/1@2x.jpg 2x', alt='')
+							.card-publications__col
+								h4 Russian S&T Daily Digest on
+								.card-publications__text The Ministry of Science and ICT and National Research Foundation of Korea are
+									|  announcing the Call for 2021 Korea-Russia Joint. The Call for 2021 Korea-Russia Joint...
+								.card-publications__pdf.pdf
+									a.pdf__download(href='#', download)
+										+icon('download')(width='19', height='18')
+									.pdf__select-wrapper
+										.pdf__select
+											.pdf__select-scroll
+												a(href='#', download)
+													span Brain_Pool_announcement 1
+												a(href='#', download)
+													span Brain_Pool_announcement 2
+												a(href='#', download)
+													span Brain_Pool_announcement 1
+												a(href='#', download)
+													span Brain_Pool_announcement 2
+												a(href='#', download)
+													span Brain_Pool_announcement 1
+												a(href='#', download)
+													span Brain_Pool_announcement 2
+												a(href='#', download)
+													span Brain_Pool_announcement 1
+												a(href='#', download)
+													span Brain_Pool_announcement 2
+									button.pdf__quantity +<span class="js-pdf-quantity">7</span>
+									.pdf__close
+										+icon('close')(width='7', height='7')
+						.card-publications__bottom
+							+tags(['new material', 'cosmos', 'nuclear'])
+							.card-publications__date 26.03.2022
+					.archive__item.card-publications
+						a.link-inset(href='publications-single.html', target='_blank')
+						.card-publications__wrapper
+							.card-publications__col
+								.card-publications__image-wrapper
+									.card-publications__image
+										img(src='images/publications/1.jpg', srcset='images/publications/1@2x.jpg 2x', alt='')
+							.card-publications__col
+								h4 Russian S&T Daily Digest on
+								.card-publications__text The Ministry of Science and ICT and National Research Foundation of Korea are
+									|  announcing the Call for 2021 Korea-Russia Joint. The Call for 2021 Korea-Russia Joint...
+								.card-publications__pdf.pdf
+									a.pdf__download(href='#', download)
+										+icon('download')(width='19', height='18')
+									.pdf__select-wrapper
+										.pdf__select
+											.pdf__select-scroll
+												a(href='#', download)
+													span Brain_Pool_announcement 1
+												a(href='#', download)
+													span Brain_Pool_announcement 2
+												a(href='#', download)
+													span Brain_Pool_announcement 1
+												a(href='#', download)
+													span Brain_Pool_announcement 2
+												a(href='#', download)
+													span Brain_Pool_announcement 1
+												a(href='#', download)
+													span Brain_Pool_announcement 2
+												a(href='#', download)
+													span Brain_Pool_announcement 1
+												a(href='#', download)
+													span Brain_Pool_announcement 2
+									button.pdf__quantity +<span class="js-pdf-quantity">7</span>
+									.pdf__close
+										+icon('close')(width='7', height='7')
+						.card-publications__bottom
+							+tags(['new material', 'nuclear'])
+							.card-publications__date 26.03.2022
+					.archive__item.card-publications
+						a.link-inset(href='publications-single.html', target='_blank')
+						.card-publications__wrapper
+							.card-publications__col
+								.card-publications__image-wrapper
+									.card-publications__image
+										img(src='images/publications/1.jpg', srcset='images/publications/1@2x.jpg 2x', alt='')
+							.card-publications__col
+								h4 Call for 2021 Korea-Russia S&T Joint Research Project
+								.card-publications__text The Ministry of Science and ICT and National Research Foundation of Korea are
+									|  announcing the Call for 2021 Korea-Russia Joint. The Call for 2021 Korea-Russia Joint...
+								.card-publications__pdf.pdf
+									a.pdf__download(href='#', download)
+										+icon('download')(width='19', height='18')
+									.pdf__select-wrapper
+										.pdf__select
+											.pdf__select-scroll
+												a(href='#', download)
+													span Brain_Pool_announcement 1
+												a(href='#', download)
+													span Brain_Pool_announcement 2
+												a(href='#', download)
+													span Brain_Pool_announcement 1
+												a(href='#', download)
+													span Brain_Pool_announcement 2
+												a(href='#', download)
+													span Brain_Pool_announcement 1
+												a(href='#', download)
+													span Brain_Pool_announcement 2
+												a(href='#', download)
+													span Brain_Pool_announcement 1
+												a(href='#', download)
+													span Brain_Pool_announcement 2
+									button.pdf__quantity +<span class="js-pdf-quantity">7</span>
+									.pdf__close
+										+icon('close')(width='7', height='7')
+						.card-publications__bottom
+							+tags(['new material', 'nuclear'])
+							.card-publications__date 26.03.2022
+			+pagination('publications-page__pagination d-none-flex-mobile')
+			.publications-page__button
+				+button('SHOW MORE', 'button--black d-none-flex-desktop', '#')

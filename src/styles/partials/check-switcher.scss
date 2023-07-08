@@ -1,0 +1,52 @@
+.check-switcher {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+
+	@include hover {
+		b {
+			border-color: $blue-0a;
+		}
+	}
+
+	input {
+		display: none;
+
+		&:checked + b::before {
+			background-color: $blue-0a;
+			margin-left: auto;
+		}
+	}
+
+	b {
+		width: 60px;
+		height: 36px;
+		padding: 6px;
+		display: flex;
+		align-items: center;
+		background-color: $white;
+		border: 1px solid $grey-ca;
+		border-radius: 100px;
+		box-sizing: border-box;
+		margin-right: 13px;
+		transition: 0.3s ease;
+
+		&::before {
+			content: '';
+			display: block;
+			width: 24px;
+			height: 24px;
+			background-color: $grey-ca;
+			border-radius: 50%;
+		}
+	}
+
+	span {
+		font-size: 14px;
+		color: $black-23;
+		text-transform: uppercase;
+		-webkit-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+	}
+}

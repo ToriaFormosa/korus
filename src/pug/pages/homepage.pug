@@ -1,0 +1,33 @@
+extends ../layouts/default
+
+block vars
+	-
+		const page = {
+			title: 'Korustec | Home'
+		};
+
+block main
+	include ../blocks/first-screen.pug
+	include ../blocks/mission.pug
+	include ../blocks/publications.pug
+	include ../blocks/news.pug
+	include ../blocks/events.pug
+	include ../blocks/partners.pug
+
+block additional-scripts
+	script#vertexshader(type='x-shader/x-vertex').
+		attribute float scale;
+		void main() {
+		vec4 mvPosition = modelViewMatrix * vec4( position, 1.0 );
+		gl_PointSize = scale * ( 300.0 / - mvPosition.z );
+		gl_Position = projectionMatrix * mvPosition;
+		}
+	script#fragmentshader(type='x-shader/x-fragment').
+		uniform vec3 color;
+		void main() {
+		if ( length( gl_PointCoord - vec2( 0.5, 0.5 ) ) > 0.475 ) discard;
+		gl_FragColor = vec4( color, 1.0 );
+		}
+
+block scripts
+	script(src="js/wave.js")

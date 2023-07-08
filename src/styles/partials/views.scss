@@ -1,0 +1,16 @@
+.views {
+	display: flex;
+	align-items: center;
+
+	&__icon {
+		width: 30px;
+		height: 30px;
+		margin-right: 5px;
+	}
+
+	&__digit {
+		font-size: 14px;
+		line-height: 16px;
+		color: $black-23;
+	}
+}

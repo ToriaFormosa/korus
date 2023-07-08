@@ -1,0 +1,39 @@
+.button {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 183px;
+	width: 100%;
+	padding: 19px 15px;
+	border: 3px solid $grey-f5;
+	border-radius: 6px;
+	font-family: $secondFont;
+	font-size: 16px;
+	line-height: 19px;
+	font-weight: 600;
+	letter-spacing: 0.02em;
+	color: $grey-f5;
+	cursor: pointer;
+	transition: 0.3s ease;
+
+	@include max(md) {
+		font-size: 14px;
+		line-height: 17px;
+		max-width: 170px;
+	}
+
+	@include hover {
+		background-color: $grey-f5;
+		color: $black;
+	}
+
+	&--black {
+		border-color: $black-23;
+		color: $black-23;
+
+		&:hover {
+			background-color: $blue-0a;
+			color: $grey-f5;
+		}
+	}
+}

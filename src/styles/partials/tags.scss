@@ -1,0 +1,38 @@
+.tags {
+	display: flex;
+	gap: 10px;
+	position: relative;
+	z-index: 7;
+
+	& > span {
+		font-size: 12px;
+		line-height: 24px;
+		color: $black-23;
+		white-space: nowrap;
+	}
+
+	&__wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 10px;
+	}
+
+	&__item {
+		padding: 4px 10px;
+		background-color: $blue-29;
+		font-size: 14px;
+		line-height: 16px;
+		color: $grey-f3;
+		border-radius: 31px;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+		max-width: 200px;
+		overflow: hidden;
+		transition: 0.3s ease;
+
+		@include hover {
+			background-color: $blue-0a;
+			color: $white;
+		}
+	}
+}

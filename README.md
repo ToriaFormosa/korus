@@ -1,1 +1,1 @@
-# korus
+# korustec

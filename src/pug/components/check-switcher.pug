@@ -1,0 +1,5 @@
+mixin check-switcher(label, name, className)
+	label.check-switcher(class=className)
+		input(type='checkbox', name=name)
+		b
+		span!= label

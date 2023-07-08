@@ -1,0 +1,66 @@
+.archive {
+	margin-top: 64px;
+	padding-top: 128px;
+	border-top: 1px solid rgba($black, 0.3);
+
+	@include max(md) {
+		padding-top: 40px;
+	}
+
+	&__top {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		gap: 30px;
+
+		@include max(md) {
+			flex-direction: column;
+		}
+	}
+
+	&__title {
+		font-family: $secondFont;
+		font-size: 45px;
+		line-height: 54px;
+		color: $black;
+		text-align: center;
+
+		@include max(md) {
+			font-size: 32px;
+			line-height: 39px;
+		}
+	}
+
+	&__grid {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 35px;
+		margin-top: 64px;
+
+		@include max(lg) {
+			gap: 10px;
+			margin-top: 35px;
+		}
+
+		@include max(md) {
+			margin-top: 30px;
+		}
+	}
+
+	&__item {
+		width: calc(50% - 17.5px);
+
+		@include max(lg) {
+			width: calc(50% - 5px);
+		}
+
+		@include max(md) {
+			width: 100%;
+		}
+	}
+
+	&__btn {
+		background-color: transparent;
+	}
+}

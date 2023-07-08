@@ -1,0 +1,170 @@
+extends ../layouts/default
+
+block vars
+	-
+		const page = {
+			title: 'Events | Korustec'
+		};
+	- let mainModClass = 'main--visible';
+
+block main
+	.events-page
+		.container
+			h1 Events
+			.events-page__events.events
+				.events-page__subtitle
+					span Upcoming:
+					.events-page__slider-nav
+						.events-page__slider-prev
+							+icon('chevron-right')(width='14', height='24')
+						.events-page__slider-next
+							+icon('chevron-right')(width='14', height='24')
+		.events-page__slider-overflow
+			.container
+				.events__slider.js-slider-events-2
+					.swiper-wrapper
+						.card-events.swiper-slide
+							a.link-inset(href='events-single.html', target='_blank')
+							.card-events__top
+								.card-events__date 20 / 09
+								.card-events__time 13:00 - 16:00
+							.card-events__content
+								img(src='images/events/1.jpg', srcset='images/events/1@2x.jpg 2x', alt='')
+								h4 Think Tank Needs to Build a National Research System
+								.card-events__status.status.status--online Online
+						.card-events.swiper-slide
+							a.link-inset(href='events-single.html', target='_blank')
+							.card-events__top
+								.card-events__date 20 / 09
+								.card-events__time 13:00 - 16:00
+							.card-events__content
+								img(src='images/events/2.jpg', srcset='images/events/2@2x.jpg 2x', alt='')
+								h4 Think Tank Needs to Build a National Research System
+								.card-events__status.status.status--offline Online
+						.card-events.swiper-slide
+							.card-events__top
+								.card-events__date -- / --
+								.card-events__time --:-- - --:--
+							.card-events__content
+								img(src='images/events/ph.jpg', srcset='images/events/ph@2x.jpg 2x', alt='')
+						.card-events.swiper-slide
+							.card-events__top
+								.card-events__date -- / --
+								.card-events__time --:-- - --:--
+							.card-events__content
+								img(src='images/events/ph.jpg', srcset='images/events/ph@2x.jpg 2x', alt='')
+						.card-events.swiper-slide
+							.card-events__top
+								.card-events__date -- / --
+								.card-events__time --:-- - --:--
+							.card-events__content
+								img(src='images/events/ph.jpg', srcset='images/events/ph@2x.jpg 2x', alt='')
+		.container
+			.events-page__subtitle
+				span Past:
+		.container.events-page__container-full
+			.events-page__block.d-none-mobile
+				.events-page__year-list
+					.events-page__year-digit
+						span 20<br>22
+					.events-page__year-wrapper
+						.events-page__card-events-single.card-events-single
+							.card-events-single__image-wrapper
+								.card-events-single__image
+									img(src='images/events/2.jpg', srcset='images/events/2@2x.jpg 2x', alt='')
+							.card-events-single__content
+								h4
+									a(href='events-single.html', target='_blank') Think Tank Needs to Build a <br class="d-none-mobile"> National Research <br class="d-none-mobile"> System
+								.card-events-single__captions
+									+caption('Date: ', '', '20/09/2022', 'card-events-single__caption')
+									+caption('Time: ', '', '13:00 - 16:00', 'card-events-single__caption')
+								.card-events-single__status.status.status--offline.status--dark.status--align-left Offline
+						.events-page__card-events-single.card-events-single
+							.card-events-single__image-wrapper
+								.card-events-single__image
+									img(src='images/events/1.jpg', srcset='images/events/1@2x.jpg 2x', alt='')
+							.card-events-single__content
+								h4
+									a(href='events-single.html', target='_blank') Think Tank Needs to Build a <br class="d-none-mobile"> National Research <br class="d-none-mobile"> System
+								.card-events-single__captions
+									+caption('Date: ', '', '20/09/2022', 'card-events-single__caption')
+									+caption('Time: ', '', '13:00 - 16:00', 'card-events-single__caption')
+								.card-events-single__status.status.status--offline.status--dark.status--align-left Offline
+						.events-page__card-events-single.card-events-single
+							.card-events-single__image-wrapper
+								.card-events-single__image
+									img(src='images/events/3.jpg', srcset='images/events/3@2x.jpg 2x', alt='')
+							.card-events-single__content
+								h4
+									a(href='events-single.html', target='_blank') Think Tank Needs to Build a <br class="d-none-mobile"> National Research <br class="d-none-mobile"> System
+								.card-events-single__captions
+									+caption('Date: ', '', '20/09/2022', 'card-events-single__caption')
+									+caption('Time: ', '', '13:00 - 16:00', 'card-events-single__caption')
+								.card-events-single__status.status.status--offline.status--dark.status--align-left Offline
+				.events-page__year-list
+					.events-page__year-digit
+						span 20<br>21
+					.events-page__year-wrapper
+						.events-page__card-events-single.card-events-single
+							.card-events-single__image-wrapper
+								.card-events-single__image
+									img(src='images/events/4.jpg', srcset='images/events/4@2x.jpg 2x', alt='')
+							.card-events-single__content
+								h4
+									a(href='events-single.html', target='_blank') Think Tank Needs to Build a <br class="d-none-mobile"> National Research <br class="d-none-mobile"> System
+								.card-events-single__captions
+									+caption('Date: ', '', '20/09/2022', 'card-events-single__caption')
+									+caption('Time: ', '', '13:00 - 16:00', 'card-events-single__caption')
+								.card-events-single__status.status.status--offline.status--dark.status--align-left Offline
+						.events-page__card-events-single.card-events-single
+							.card-events-single__image-wrapper
+								.card-events-single__image
+									img(src='images/events/2.jpg', srcset='images/events/2@2x.jpg 2x', alt='')
+							.card-events-single__content
+								h4
+									a(href='events-single.html', target='_blank') Think Tank Needs to Build a <br class="d-none-mobile"> National Research <br class="d-none-mobile"> System
+								.card-events-single__captions
+									+caption('Date: ', '', '20/09/2022', 'card-events-single__caption')
+									+caption('Time: ', '', '13:00 - 16:00', 'card-events-single__caption')
+								.card-events-single__status.status.status--offline.status--dark.status--align-left Offline
+						.events-page__card-events-single.card-events-single
+							.card-events-single__image-wrapper
+								.card-events-single__image
+									img(src='images/events/1.jpg', srcset='images/events/1@2x.jpg 2x', alt='')
+							.card-events-single__content
+								h4
+									a(href='events-single.html', target='_blank') Think Tank Needs to Build a <br class="d-none-mobile"> National Research <br class="d-none-mobile"> System
+								.card-events-single__captions
+									+caption('Date: ', '', '20/09/2022', 'card-events-single__caption')
+									+caption('Time: ', '', '13:00 - 16:00', 'card-events-single__caption')
+								.card-events-single__status.status.status--offline.status--dark.status--align-left Offline
+						.events-page__card-events-single.card-events-single
+							.card-events-single__image-wrapper
+								.card-events-single__image
+									img(src='images/events/3.jpg', srcset='images/events/3@2x.jpg 2x', alt='')
+							.card-events-single__content
+								h4
+									a(href='events-single.html', target='_blank') Think Tank Needs to Build a <br class="d-none-mobile"> National Research <br class="d-none-mobile"> System
+								.card-events-single__captions
+									+caption('Date: ', '', '20/09/2022', 'card-events-single__caption')
+									+caption('Time: ', '', '13:00 - 16:00', 'card-events-single__caption')
+								.card-events-single__status.status.status--offline.status--dark.status--align-left Offline
+				.events-page__year-list.events-page__year-list--button
+					.events-page__year-digit
+					.events-page__year-wrapper
+						.events-page__button
+							+button('SHOW MORE', 'button--black', '#')
+
+			.events-page__block.d-none-desktop
+				+caption('Think Tank Needs to Build a National Research System', '20/09/2022', '', 'events-page__mobile-caption')
+				+caption('Think Tank Needs to Build a National Research System', '20/09/2022', '', 'events-page__mobile-caption')
+				+caption('Think Tank Needs to Build a National Research System', '20/09/2022', '', 'events-page__mobile-caption')
+				+caption('Think Tank Needs to Build a National Research System', '20/09/2022', '', 'events-page__mobile-caption')
+				+caption('Think Tank Needs to Build a National Research System', '20/09/2022', '', 'events-page__mobile-caption')
+				+caption('Think Tank Needs to Build a National Research System', '20/09/2022', '', 'events-page__mobile-caption')
+				+caption('Think Tank Needs to Build a National Research System', '20/09/2022', '', 'events-page__mobile-caption')
+				+caption('Think Tank Needs to Build a National Research System', '20/09/2022', '', 'events-page__mobile-caption')
+				+caption('Think Tank Needs to Build a National Research System', '20/09/2022', '', 'events-page__mobile-caption')
+				+caption('Think Tank Needs to Build a National Research System', '20/09/2022', '', 'events-page__mobile-caption')
+				.events-page__button
+					+button('SHOW MORE', 'button--black', '#')

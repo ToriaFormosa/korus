@@ -1,0 +1,21 @@
+footer.footer
+	.container
+		a.footer__logo.d-none-mobile(href='/')
+			+icon('logo-footer')(width='251', height='64')
+		a.footer__logo.d-none-desktop(href='/')
+			+icon('logo-footer-2')(width='145', height='37')
+		.footer__content
+			address 117246, Office 35, Nauchniy proezd 17, Moscow, Russia
+			.footer__socials
+				a.footer__socials-item(href='#', target='_blank')
+					+icon('fb')(width='19', height='19')
+					span Facebook
+			a(href='tel:+74993224196', target='_blank') +7-499-322-4196
+			.footer__bottom
+				.footer__email
+					a(href='mailto:korustec@gmail.com', target='_blank') korustec@gmail.com
+					span (Korean, English, Russian)
+				span.footer__copyrights © 2022 Korustec. All Right Reserved.
+				a(href='#', target='_blank') Privacy Policy
+				a(href='#', target='_blank') Personal data processing policy
+				span Developed in bofer.ru

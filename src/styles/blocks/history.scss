@@ -1,0 +1,62 @@
+.history {
+	padding-top: 168px;
+
+	@include max(lg) {
+		padding-top: 100px;
+	}
+
+	&__slider {
+		margin-top: 100px;
+		padding-top: 7px;
+
+		.swiper-wrapper {
+			transition-timing-function: linear;
+		}
+	}
+
+	&__item {
+		cursor: pointer;
+	}
+
+	&__line {
+		width: 100%;
+		height: 1px;
+		background-color: $grey-ca;
+		position: relative;
+
+		&::before {
+			content: '';
+			display: block;
+			width: 10px;
+			height: 10px;
+			background-color: $blue-0a;
+			border-radius: 50%;
+			position: absolute;
+			top: 50%;
+			left: 0;
+			transform: translateY(-50%);
+		}
+	}
+
+	&__content {
+		padding-right: 60px;
+		box-sizing: border-box;
+	}
+
+	&__date {
+		font-family: $secondFont;
+		font-size: 36px;
+		line-height: 44px;
+		font-weight: 700;
+		letter-spacing: -0.04em;
+		margin-top: 20px;
+	}
+
+	&__text {
+		font-size: 16px;
+		line-height: 21px;
+		letter-spacing: 0.01em;
+		color: $black-23;
+		margin-top: 6px;
+	}
+}

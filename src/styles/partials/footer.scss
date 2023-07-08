@@ -1,0 +1,121 @@
+.footer {
+	background-color: $black;
+	padding: 65px 0 21px;
+	font-size: 16px;
+	line-height: 21px;
+	color: $grey-f5;
+	letter-spacing: 0.01em;
+
+	@include max(lg) {
+		padding: 45px 0 21px;
+	}
+
+	@include max(md) {
+		font-size: 14px;
+		line-height: 18px;
+		padding: 41px 0 21px;
+	}
+
+	a {
+		display: inline-flex;
+		font-size: 16px;
+		line-height: 21px;
+		color: $grey-f5;
+		letter-spacing: 0.01em;
+
+		@include max(md) {
+			font-size: 14px;
+			line-height: 18px;
+		}
+	}
+
+	&__content {
+		margin-top: 60px;
+
+		@include max(lg) {
+			margin-top: 40px;
+		}
+
+		@include max(md) {
+			margin-top: 36px;
+		}
+
+		& > * + * {
+			margin-top: 8px;
+		}
+
+		address {
+			max-width: 285px;
+			font-style: normal;
+		}
+	}
+
+	&__socials {
+		display: flex;
+		align-items: center;
+		gap: 10px;
+	}
+
+	&__socials-item {
+		display: flex;
+		align-items: center;
+
+		svg {
+			margin-right: 7px;
+		}
+	}
+
+	&__bottom {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+		gap: 10px 52px;
+
+		@include max(lg) {
+			justify-content: space-between;
+		}
+
+		@include max(md) {
+			flex-direction: column;
+			align-items: flex-start;
+			gap: 15px;
+		}
+
+		& > span:last-of-type {
+			@include max(lg) {
+				order: 3;
+			}
+		}
+
+		& > a {
+			&:first-of-type {
+				@include max(lg) {
+					order: 2;
+				}
+			}
+
+			&:last-of-type {
+				@include max(lg) {
+					order: 1;
+				}
+			}
+		}
+	}
+
+	&__email {
+		@include max(lg) {
+			width: 100%;
+		}
+
+		a {
+			margin-right: 10px;
+		}
+	}
+
+	&__copyrights {
+		@include max(lg) {
+			width: 100%;
+			margin-top: 9px;
+		}
+	}
+}

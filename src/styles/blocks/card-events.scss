@@ -1,0 +1,112 @@
+.card-events {
+	$parent: &;
+
+	display: flex;
+	flex-direction: column;
+	width: 286px;
+	min-height: 467px;
+	border-radius: 20px;
+	overflow: hidden;
+	color: $grey-f5;
+	position: relative;
+
+	@include max(360) {
+		width: 250px;
+	}
+
+	@include hover {
+		#{$parent}__content img {
+			transform: scale(1.08);
+		}
+	}
+
+	&__top {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		gap: 15px;
+		height: 78px;
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='286' height='78' viewBox='0 0 286 78' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M207.39 0H199.031C196.193 2.3037 190.895 5.5 183.14 5.5C175.386 5.5 170.088 2.3037 167.25 0H158.891C156.052 2.3037 150.755 5.5 143 5.5C135.245 5.5 129.948 2.3037 127.11 0H118.75C115.912 2.3037 110.614 5.5 102.86 5.5C95.1051 5.5 89.8074 2.3037 86.9693 0H78.6097C75.7716 2.3037 70.4739 5.5 62.7192 5.5C54.9646 5.5 49.6669 2.3037 46.8288 0H17C7.61116 0 0 7.61116 0 17V78H286V17C286 7.61116 278.389 0 269 0H239.171C236.333 2.3037 231.035 5.5 223.281 5.5C215.526 5.5 210.229 2.3037 207.39 0Z' fill='black'/%3e%3c/svg%3e ");
+		background-repeat: no-repeat;
+		background-size: cover;
+		padding: 24px 17px 10px;
+		position: relative;
+		z-index: 1;
+
+		@include max(lg) {
+			height: 64px;
+			padding: 21px 12px 10px;
+		}
+	}
+
+	&__date {
+		font-family: $secondFont;
+		font-size: 36px;
+		line-height: 44px;
+		font-weight: 700;
+		letter-spacing: -0.04em;
+
+		@include max(lg) {
+			font-size: 18px;
+			line-height: 22px;
+		}
+	}
+
+	&__time {
+		font-size: 16px;
+		line-height: 21px;
+		letter-spacing: 0.01em;
+
+		@include max(lg) {
+			font-size: 14px;
+			line-height: 18px;
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		flex-grow: 1;
+		background-color: $black;
+		padding: 81px 17px 8px;
+		margin-top: -2px;
+		position: relative;
+
+		@include max(lg) {
+			padding: 81px 12px 8px;
+		}
+
+		&::after {
+			content: '';
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: rgba($black, 0.6);
+		}
+
+		img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			position: absolute;
+			inset: 0;
+			transition: 0.4s ease;
+		}
+
+		h4 {
+			font-size: 27px;
+			line-height: 33px;
+			position: relative;
+			z-index: 1;
+		}
+	}
+
+	&__status {
+		position: relative;
+		z-index: 1;
+	}
+}
